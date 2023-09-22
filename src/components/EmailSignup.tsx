@@ -76,16 +76,13 @@ export default function EmailSignup(props: Props) {
       .insert({ email: email, source: purpose })
       .select(selectAll);
 
-    console.log(data, error);
-
     if (
-      error &&
-      error.message.startsWith("duplicate key value violates unique constraint")
+      data ||
+      (error &&
+        error.message.startsWith(
+          "duplicate key value violates unique constraint"
+        ))
     ) {
-      setErrorMessage("Email already added, we've got your contact!");
-    }
-
-    if (data) {
       setStatus(ResponseStatus.SuccessfullyAdded);
       setEmail("");
       return true;
@@ -110,14 +107,14 @@ export default function EmailSignup(props: Props) {
 
     if (levenshtein.get(emailEnd, nu) <= 3) {
       const out = emailStart + "@" + nu;
-      console.log(out)
+      console.log(out);
       setEmail(out);
       return out;
     }
 
     if (levenshtein.get(emailEnd, gm) <= 3) {
       const out = emailStart + "@" + gm;
-      console.log(out)
+      console.log(out);
       setEmail(out);
       return out;
     }
@@ -146,7 +143,7 @@ export default function EmailSignup(props: Props) {
         placeholder="oasisneu@gmail.com"
         onChange={(e) => {
           setEmail(e.target.value);
-          setErrorMessage("")
+          setErrorMessage("");
           validateEmail(email);
         }}
         onKeyDown={(e) => {
