@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
 import { supabase } from "../../lib/initSupabase";
 import Typed from "typed.js";
+import levenshtein from "fast-levenshtein";
 
 enum ResponseStatus {
   Waiting,
@@ -16,12 +17,11 @@ enum ResponseStatus {
 }
 
 interface Props {
-  purpose: string
+  purpose: string;
 }
 
 export default function EmailSignup(props: Props) {
-
-  const {purpose} = props
+  const { purpose } = props;
   const ref = useRef(null);
 
   const selectAll = "*";
@@ -30,6 +30,7 @@ export default function EmailSignup(props: Props) {
 
   const [email, setEmail] = useState<string>("");
   const [status, setStatus] = useState<ResponseStatus>(ResponseStatus.Waiting);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   useEffect(() => {
     if (email === "") {
@@ -50,30 +51,21 @@ export default function EmailSignup(props: Props) {
   }, [email]);
 
   const validateEmail = (email: string) => {
-    var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const validRegex = RegExp(
+      "[-A-Za-z0-9!#$%&'*+/=?^_`{|}~]+(?:.[-A-Za-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?.)+[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?"
+    );
 
     if (email === "") {
       return false;
-    } else if (email.match(validRegex)) {
+    } else if (
+      email.match(validRegex) &&
+      email.split("@").length === 2 &&
+      email.split("@")[1].includes(".")
+    ) {
       setStatus(ResponseStatus.Ready);
       return true;
     } else {
       setStatus(ResponseStatus.Waiting);
-      return false;
-    }
-  };
-
-  const checkExists = async (email: string) => {
-    let { data: emails, error } = await supabase
-      .from(dbName)
-      .select(selectAll)
-      .eq(colName, email);
-
-    if ((emails?.length ?? 0) > 0) {
-      setStatus(ResponseStatus.AddFailed);
-      return true;
-    } else {
       return false;
     }
   };
@@ -83,6 +75,15 @@ export default function EmailSignup(props: Props) {
       .from(dbName)
       .insert({ email: email, source: purpose })
       .select(selectAll);
+
+    console.log(data, error);
+
+    if (
+      error &&
+      error.message.startsWith("duplicate key value violates unique constraint")
+    ) {
+      setErrorMessage("Email already added, we've got your contact!");
+    }
 
     if (data) {
       setStatus(ResponseStatus.SuccessfullyAdded);
@@ -94,17 +95,45 @@ export default function EmailSignup(props: Props) {
     }
   };
 
+  const correctEmail = (email: string): string => {
+    const nu = "northeastern.edu";
+    const gm = "gmail.com";
+
+    const emailParts = email.split("@");
+
+    if (emailParts.length < 2) {
+      return email;
+    }
+
+    const emailStart = emailParts[0];
+    const emailEnd = emailParts[1];
+
+    if (levenshtein.get(emailEnd, nu) <= 3) {
+      const out = emailStart + "@" + nu;
+      console.log(out)
+      setEmail(out);
+      return out;
+    }
+
+    if (levenshtein.get(emailEnd, gm) <= 3) {
+      const out = emailStart + "@" + gm;
+      console.log(out)
+      setEmail(out);
+      return out;
+    }
+
+    return email;
+  };
+
   const addEmail = async (email: string) => {
     if (status === ResponseStatus.Ready) {
-      const exists: boolean = await checkExists(email);
-      if (!exists) {
-        const insert = await insertEmail(email);
-      }
+      const em = correctEmail(email);
+      await insertEmail(em);
     }
   };
 
   return (
-    <div className="sm:w-1/3 grid grid-cols-7 md:grid-rows-2 grid-rows-3 gap-2 w-full">
+    <div className="sm:w-1/3 grid grid-cols-7 md:grid-rows-4 grid-rows-4 gap-2 w-full">
       <p className="text-xl col-start-1 col-span-full row-start-1 flex flex-row items-end justify-center md:justify-start">
         {strings.Sock.call}
       </p>
@@ -117,6 +146,7 @@ export default function EmailSignup(props: Props) {
         placeholder="oasisneu@gmail.com"
         onChange={(e) => {
           setEmail(e.target.value);
+          setErrorMessage("")
           validateEmail(email);
         }}
         onKeyDown={(e) => {
@@ -167,6 +197,9 @@ export default function EmailSignup(props: Props) {
           </div>
         </div>
       </button>
+      <p className="row-span-1 row-start-4 col-start-2 md:col-start-1 md:text-left text-center italic col-span-5 md:col-span-full md:row-start-3">
+        {errorMessage}
+      </p>
     </div>
   );
 }
