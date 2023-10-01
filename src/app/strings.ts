@@ -124,7 +124,7 @@ const strings = {
       { num: "2", date: "10/1", hook: "Getting a Sense" },
       { num: "3", date: "10/15", hook: "Data-BASED" },
       { num: "4", date: "10/22", hook: "Wilding with Styling" },
-      { num: "5", date: "10/29", hook: "Mid-Semester Demos" },
+      { num: "5", date: "10/29", hook: "Alumni Guest Speaker" },
       { num: "6", date: "11/5", hook: "Reacting to Progress" },
       { num: "7", date: "11/12", hook: "Reeling it in" },
       { num: "8", date: "11/19", hook: "Presentation Prep" },
