@@ -19,7 +19,7 @@ export default function ExplorerJoin() {
       title: "Full Stack Launchpad",
       body: "In collaboration with Disrupt, we'll teach you the basics of databases using Supabase, and then introduce some essentials of SQL to help you make masterful queries. Can't wait to see you there!",
       icon: faRocket,
-      date: "October 12th, 6-7:30pm; Behrakis 010",
+      date: "October 12th, 6-7:30pm; Richards 300",
       redacted: false
     },
     {
