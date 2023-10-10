@@ -17,10 +17,10 @@ export default function ExplorerJoin() {
     },
     {
       title: "Full Stack Launchpad",
-      body: "Build on your Hack Session 0 foundations with more advanced React knowledge, an intro to databases, intro to APIs, and share your projects with others after learning about deployment!",
+      body: "In collaboration with Disrupt, we'll teach you the basics of databases using Supbase, and then introduce some essentails of SQL to help you make masterful queries. Can't wait to see you there!",
       icon: faRocket,
-      date: "October 12th, 6-8pm; Behrakis 010",
-      redacted: true
+      date: "October 12th, 6-7:30pm; Behrakis 010",
+      redacted: false
     },
     {
       title: "TBA",
