@@ -1,7 +1,7 @@
 import PageWrapper from "@/components/PageWrapper";
 import twMerge from "../../../twMerge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGit, faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faAppStoreIos, faGit, faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faFish, faRocket } from "@fortawesome/free-solid-svg-icons";
 import strings from "../strings";
@@ -20,6 +20,13 @@ export default function ExplorerJoin() {
       body: "In collaboration with Disrupt, we'll teach you the basics of databases using Supabase, and then introduce some essentials of SQL to help you make masterful queries. Can't wait to see you there!",
       icon: faRocket,
       date: "October 12th, 6-7:30pm; Richards 300",
+      redacted: false
+    },
+    {
+      title: "Intro to iOS App Dev",
+      body: "In collaboration with MULTI, we're teaching you how to build iOS apps with SwiftUI! We'll walk through the basics of Swift, how to build user interfaces, and how to add interactivity. No prior experience necessary, but a Mac is required.",
+      icon: faAppStoreIos,
+      date: "October 25th, 7-8pm; Curry 144",
       redacted: false
     },
     {

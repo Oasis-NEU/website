@@ -122,7 +122,7 @@ const strings = {
       { num: "0", date: "9/17", hook: "Git-ing Started" },
       { num: "1", date: "9/24", hook: "Shoot Your Shot" },
       { num: "2", date: "10/1", hook: "Getting a Sense" },
-      { num: "3", date: "10/15", hook: "Data-BASED" },
+      { num: "3", date: "10/15", hook: "Data[basics]" },
       { num: "4", date: "10/22", hook: "Wilding with Styling" },
       { num: "5", date: "10/29", hook: "Alumni  Guest Speaker" },
       { num: "6", date: "11/5", hook: "Reacting to Progress" },
