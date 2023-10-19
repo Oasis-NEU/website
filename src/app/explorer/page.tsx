@@ -41,7 +41,6 @@ export default function ExplorerJoin() {
   return (
     <PageWrapper active={"Explorer Series"} title={"Oasis | Explorer Series"}>
       {/* I think we should use some major graphic at the start of the explore page to make it clear that it's different */}
-
       <h1 className="text-ex-blue-dark">Major events, open to all.</h1>
       <div className="flex flex-col gap-8 mt-4 mb-16">
         {events.map(({ title, body, date, icon, redacted }, i) => (
