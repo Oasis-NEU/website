@@ -1,40 +1,127 @@
+"use client";
+
 import PageWrapper from "@/components/PageWrapper";
 import twMerge from "../../../twMerge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAppStoreIos, faGit, faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faAppStoreIos, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faFish, faRocket } from "@fortawesome/free-solid-svg-icons";
-import strings from "../strings";
+import * as ics from "ics";
+
+function formatDate(
+  year: number,
+  month: number,
+  day: number,
+  hr24: number,
+  min60: number
+): string {
+  let options: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    day: "numeric",
+    month: "short",
+    hour: "numeric",
+    minute: "numeric",
+  };
+
+  return new Date(year + "-0" + month + "-0" + day + "-" + hr24 + ":" + min60)
+    .toLocaleDateString(navigator.languages[0] ?? "en-US", options)
+    .replace(":00", "");
+}
+
+function downloadICS(
+  title: string,
+  year: number,
+  month: number,
+  day: number,
+  hr24: number,
+  min60: number,
+  durationMins: number,
+  description: string,
+  location: string
+) {
+  ics.createEvent(
+    {
+      title: title,
+      busyStatus: "BUSY",
+      start: [year, month, day, hr24, min60],
+      duration: { minutes: durationMins },
+      description: description,
+      location: location,
+    },
+    (error, value) => {
+      if (error) {
+        console.log(error);
+      }
+
+      const element = document.createElement("a");
+      const file = new Blob([value], {
+        type: "text/calendar",
+      });
+      element.href = URL.createObjectURL(file);
+      element.download = title.replaceAll(" ", "") + ".ics";
+      document.body.appendChild(element); // Required for this to work in FireFox
+      element.click();
+    }
+  );
+}
 
 export default function ExplorerJoin() {
   const events = [
     {
       title: "Hack Session 0: Git Started",
-      body: "Learn the foundational basics of Git and React so you can build websites collaboratively with a team, either as part of the Project Series or on your own with the help of our Resources.",
+      description:
+        "Learn the foundational basics of Git and React so you can build websites collaboratively with a team, either as part of the Project Series or on your own with the help of our Resources.",
       icon: faGithub,
-      date: "September 17th, 12-2pm; Behrakis 010",
-      redacted: false
+      year: 2023,
+      month: 9,
+      day: 17,
+      hr24: 12,
+      min60: 0,
+      durationMins: 120,
+      location: "Behrakis 010",
+      redacted: false,
     },
     {
       title: "Full Stack Launchpad",
-      body: "In collaboration with Disrupt, we'll teach you the basics of databases using Supabase, and then introduce some essentials of SQL to help you make masterful queries. Can't wait to see you there!",
+      description:
+        "In collaboration with Disrupt, we'll teach you the basics of databases using Supabase, and then introduce some essentials of SQL to help you make masterful queries. Can't wait to see you there!",
       icon: faRocket,
-      date: "October 12th, 6-7:30pm; Richards 300",
-      redacted: false
+      year: 2023,
+      month: 10,
+      day: 12,
+      hr24: 18,
+      min60: 0,
+      durationMins: 90,
+      location: "Richards 300",
+      redacted: false,
     },
     {
       title: "Intro to iOS App Dev",
-      body: "In collaboration with MULTI, we're teaching you how to build iOS apps with SwiftUI! We'll walk through the basics of Swift, how to build user interfaces, and how to add interactivity. No prior experience necessary, but a Mac is required.",
+      description:
+        "In collaboration with MULTI, we're teaching you how to build iOS apps with SwiftUI! We'll walk through the basics of Swift, how to build user interfaces, and how to add interactivity. No prior experience necessary, but a Mac is required.",
       icon: faAppStoreIos,
-      date: "October 25th, 7-8pm; Curry 144",
-      redacted: false
+      year: 2023,
+      month: 10,
+      day: 25,
+      hr24: 19,
+      min60: 0,
+      durationMins: 60,
+      location: "Curry 144",
+      redacted: false,
     },
     {
       title: "RESTful APIs",
-      body: "Come learn how to use RESTful APIs in your web apps. We'll walk through what they are, and then build a site that makes use of them together!",
+      description:
+        "Come learn how to use RESTful APIs in your web apps. We'll walk through what they are, and then build a site that makes use of them together!",
       icon: faFish,
-      date: "November 2nd, 7-8pm; WVH 212",
-      redacted: false
+      year: 2023,
+      month: 11,
+      day: 2,
+      hr24: 19,
+      min60: 0,
+      durationMins: 60,
+      location: "WVH 212",
+      redacted: false,
     },
   ];
 
@@ -43,43 +130,86 @@ export default function ExplorerJoin() {
       {/* I think we should use some major graphic at the start of the explore page to make it clear that it's different */}
       <h1 className="text-ex-blue-dark">Major events, open to all.</h1>
       <div className="flex flex-col gap-8 mt-4 mb-16">
-        {events.map(({ title, body, date, icon, redacted }, i) => (
-          <div
-            key={i}
-            className={twMerge(
-              "flex gap-0 md:flex-row flex-col w-full items-start max-w-3xl p-4 bg-ex-blue-pastel bg-opacity-30 shadow-md rounded-lg relative group -ml-0",
-              i % 2 === 0 ? "md:mr-24 mr-12" : "md:ml-24 ml-0"
-            )}
-          >
-            {i % 2 === 0 ? (
-              <div className={i === events.length - 1 ? "hidden" : "md:block hidden"}>
-                <div className="absolute translate-x-4 md:translate-x-12 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                <div className="absolute translate-x-4 md:translate-x-12 translate-y-8 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                <div className="absolute translate-x-4 md:translate-x-12 right-0 top-1/2 bottom-0 w-4 md:w-12 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+        {events.map(
+          (
+            {
+              title,
+              description,
+              year,
+              month,
+              day,
+              hr24,
+              min60,
+              durationMins,
+              location,
+              icon,
+              redacted,
+            },
+            i
+          ) => (
+            <div
+              key={i}
+              className={twMerge(
+                "flex gap-0 md:flex-row flex-col w-full items-start max-w-3xl p-4 bg-ex-blue-pastel bg-opacity-30 shadow-md rounded-lg relative group -ml-0",
+                i % 2 === 0 ? "md:mr-24 mr-12" : "md:ml-24 ml-0"
+              )}
+            >
+              {i % 2 === 0 ? (
+                <div
+                  className={
+                    i === events.length - 1 ? "hidden" : "md:block hidden"
+                  }
+                >
+                  <div className="absolute translate-x-4 md:translate-x-12 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                  <div className="absolute translate-x-4 md:translate-x-12 translate-y-8 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                  <div className="absolute translate-x-4 md:translate-x-12 right-0 top-1/2 bottom-0 w-4 md:w-12 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                </div>
+              ) : (
+                <div
+                  className={
+                    i === events.length - 1 ? "hidden" : "md:block hidden"
+                  }
+                >
+                  <div className="absolute -translate-x-4 md:-translate-x-12 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                  <div className="absolute -translate-x-4 md:-translate-x-12 translate-y-8 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                  <div className="absolute -translate-x-4 md:-translate-x-12 left-0 top-1/2 bottom-0 md:w-12 w-4 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                </div>
+              )}
+              <div className="rounded-lg absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-tr from-ex-blue to-oa-extra-light opacity-[15%] group-hover:opacity-20 transition-all duration-50"></div>
+              <div className="rounded-md shadow-md bg-oa-light p-4 z-10 md:mb-0 mb-4">
+                <FontAwesomeIcon
+                  className="h-16 w-24 text-ex-orange drop-shadow-sm"
+                  icon={icon}
+                />
               </div>
-            ) : (
-              <div className={i === events.length - 1 ? "hidden" : "md:block hidden"}>
-                <div className="absolute -translate-x-4 md:-translate-x-12 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                <div className="absolute -translate-x-4 md:-translate-x-12 translate-y-8 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                <div className="absolute -translate-x-4 md:-translate-x-12 left-0 top-1/2 bottom-0 md:w-12 w-4 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+              <div className="flex flex-col z-10 w-full flex-1 md:pl-4">
+                <h3 className="text-ex-dark">{title}</h3>
+                {!redacted && (
+                  <p className="text-ex-blue-dark">{description}</p>
+                )}
+                <button
+                  onClick={() =>
+                    downloadICS(
+                      title,
+                      year,
+                      month,
+                      day,
+                      hr24,
+                      min60,
+                      durationMins,
+                      description,
+                      location
+                    )
+                  }
+                  className="text-oa-dark italic p-2 bg-oa-light rounded-full px-4 mt-4 w-fit shadow-sm"
+                >
+                  {formatDate(year, month, day, hr24, min60)} - {location} -{" "}
+                  {durationMins / 60 === 1 ? "1hr" : durationMins / 60 + "hrs"}{" "}
+                </button>
               </div>
-            )}
-            <div className="rounded-lg absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-tr from-ex-blue to-oa-extra-light opacity-[15%] group-hover:opacity-20 transition-all duration-50"></div>
-            <div className="rounded-md shadow-md bg-oa-light p-4 z-10 md:mb-0 mb-4">
-              <FontAwesomeIcon
-                className="h-16 w-24 text-ex-orange drop-shadow-sm"
-                icon={icon}
-              />
             </div>
-            <div className="flex flex-col z-10 w-full flex-1 md:pl-4">
-              <h3 className="text-ex-dark">{title}</h3>
-              {!redacted && <p className="text-ex-blue-dark">{body}</p>}
-              <div className="text-oa-dark italic p-2 bg-oa-light rounded-full px-4 mt-4 w-fit shadow-sm">
-                {date}
-              </div>
-            </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
       <h1 className="text-ex-blue-dark mb-4">
         Built with{" "}
@@ -103,7 +233,11 @@ export default function ExplorerJoin() {
       </p>
       <h1 className="text-ex-blue-dark mb-4">By the numbers</h1>
       <div className="max-w-3xl grid grid-rows-2 grid-cols-1 sm:grid-cols-3 md:grid-rows-1 gap-8 items-center justify-center">
-        {[{count: 109, content: "HS0 Attendees"}, {count: 32, content: "Resource Pages"}, {count: 5, content: "Topic Areas"}].map((obj, i) => (
+        {[
+          { count: 109, content: "HS0 Attendees" },
+          { count: 32, content: "Resource Pages" },
+          { count: 5, content: "Topic Areas" },
+        ].map((obj, i) => (
           <div
             key={i}
             className="bg-oa-extra-light rounded-3xl flex flex-col items-center justify-center max-w-md w-full p-4 h-48 shadow-md"
