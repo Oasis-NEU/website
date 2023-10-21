@@ -7,6 +7,7 @@ import { faAppStoreIos, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faFish, faRocket } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
+import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
 
 function formatDate(
   year: number,
@@ -24,7 +25,7 @@ function formatDate(
   };
 
   return new Date(year + "-0" + month + "-0" + day + "-" + hr24 + ":" + min60)
-    .toLocaleDateString(navigator.languages[0] ?? "en-US", options)
+    .toLocaleDateString(global.navigator.languages[0] ?? "en-US", options)
     .replace(":00", "");
 }
 
@@ -112,7 +113,7 @@ export default function ExplorerJoin() {
     {
       title: "RESTful APIs",
       description:
-        "Come learn how to use RESTful APIs in your web apps. We'll walk through what they are, and then build a site that makes use of them together!",
+        "Come learn how to use RESTful APIs in your web apps. We'll walk through what they are, and then build a site that makes use of them together! We'll have time at the end for mentors to float and help you 1-on-1, as well as providing an online option for students on other Northeastern campuses. See you there!",
       icon: faFish,
       year: 2023,
       month: 11,
@@ -129,6 +130,7 @@ export default function ExplorerJoin() {
     <PageWrapper active={"Explorer Series"} title={"Oasis | Explorer Series"}>
       {/* I think we should use some major graphic at the start of the explore page to make it clear that it's different */}
       <h1 className="text-ex-blue-dark">Major events, open to all.</h1>
+      <p className="text-oa-extra-dark text-opacity-60 italic">Click any date to download, and add to your calendar.</p>
       <div className="flex flex-col gap-8 mt-4 mb-16">
         {events.map(
           (
@@ -178,7 +180,8 @@ export default function ExplorerJoin() {
               <div className="rounded-lg absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-tr from-ex-blue to-oa-extra-light opacity-[15%] group-hover:opacity-20 transition-all duration-50"></div>
               <div className="rounded-md shadow-md bg-oa-light p-4 z-10 md:mb-0 mb-4">
                 <FontAwesomeIcon
-                  className="h-16 w-24 text-ex-orange drop-shadow-sm"
+                  size="3x"
+                  className="text-ex-orange drop-shadow-sm"
                   icon={icon}
                 />
               </div>
@@ -201,10 +204,19 @@ export default function ExplorerJoin() {
                       location
                     )
                   }
-                  className="text-oa-dark italic p-2 bg-oa-light rounded-full px-4 mt-4 w-fit shadow-sm"
+                  className="text-oa-dark italic p-2 bg-oa-light hover:bg-ex-blue-pastel rounded-full px-4 mt-4 w-fit shadow-sm hover:shadow-md hover:ring-2 ring-ex-blue-dark transition-all duration-150 flex flex-row gap-2 group/download"
                 >
-                  {formatDate(year, month, day, hr24, min60)} - {location} -{" "}
-                  {durationMins / 60 === 1 ? "1hr" : durationMins / 60 + "hrs"}{" "}
+                  <FontAwesomeIcon
+                    size="lg"
+                    className=" text-ex-orange drop-shadow-sm group-hover/download:text-ex-dark group-hover/download:animate-bounce"
+                    icon={faCalendarPlus}
+                  />
+                  <span className="group-hover/download:text-ex-blue-dark">
+                    {formatDate(year, month, day, hr24, min60)} - {location} -{" "}
+                    {durationMins / 60 === 1
+                      ? "1hr"
+                      : durationMins / 60 + "hrs"}{" "}
+                  </span>
                 </button>
               </div>
             </div>
