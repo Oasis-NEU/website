@@ -30,11 +30,11 @@ export default function ExplorerJoin() {
       redacted: false
     },
     {
-      title: "TBA",
-      body: "Cillum eu cillum deserunt non. Aute nostrud nulla qui pariatur. Pariatur magna proident aliqua veniam labore velit in occaecat labore reprehenderit. Incididunt quis eiusmod amet nostrud Lorem adipisicing deserunt consectetur qui veniam enim occaecat qui elit eu.",
+      title: "RESTful APIs",
+      body: "Come learn how to use RESTful APIs in your web apps. We'll walk through what they are, and then build a site that makes use of them together!",
       icon: faFish,
-      date: "November 2nd, 6-8pm; location TBA",
-      redacted: true
+      date: "November 2nd, 7-8pm; WVH 212",
+      redacted: false
     },
   ];
 
