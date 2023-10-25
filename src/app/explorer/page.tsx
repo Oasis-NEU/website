@@ -25,7 +25,7 @@ function formatDate(
   };
 
   return new Date(year + "-0" + month + "-0" + day + "-" + hr24 + ":" + min60)
-    .toLocaleDateString(global.navigator.languages[0] ?? "en-US", options)
+    .toLocaleDateString("en-US", options)
     .replace(":00", "");
 }
 
