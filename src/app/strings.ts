@@ -144,7 +144,7 @@ const strings = {
     questions: [
       {
         q: "How do you assess applications?",
-        a: "We don't asses them in the traditional sense. We pride ourselves on being open to students from all backgrounds and experience levels, so our application is first-come first-serve to keep it simple and fair for everybody.",
+        a: "We don't assess them in the traditional sense. We pride ourselves on being open to students from all backgrounds and experience levels, so our application is first-come first-serve to keep it simple and fair for everybody.",
       },
       {
         q: "How many students are in a normal cohort?",
