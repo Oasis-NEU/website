@@ -130,7 +130,7 @@ export default function EmailSignup(props: Props) {
   };
 
   return (
-    <div className="sm:w-1/3 grid grid-cols-7 md:grid-rows-4 grid-rows-4 gap-2 w-full">
+    <div className="sm:w-1/3 grid grid-cols-7 md:grid-rows-2 grid-rows-3 gap-2 w-full">
       <p className="text-xl col-start-1 col-span-full row-start-1 flex flex-row items-end justify-center md:justify-start">
         {strings.Sock.call}
       </p>
