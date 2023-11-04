@@ -187,7 +187,7 @@ const strings = {
       {
         title: "Why",
         tagline:
-          "A low-commitment chance to mentor students and help them make their ideas into reality!",
+          "A low-commitment chance to mentor students and help them turn their ideas into reality!",
       },
     ],
   },
