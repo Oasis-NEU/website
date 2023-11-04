@@ -24,9 +24,14 @@ function formatDate(
     minute: "numeric",
   };
 
-  return new Date(year + "-0" + month + "-0" + day + "-" + hr24 + ":" + min60)
-    .toLocaleDateString("en-US", options)
-    .replace(":00", "");
+  // return new Date(month + "-" + day + "-" + year + "T" + hr24 + ":" + min60 + ":00")
+
+  return new Date(year, month, day, hr24, min60, 0, 0)
+  .toLocaleDateString("en-US", options)
+  .replace(":00", "")
+  .replace("12 PM", "noon");
+
+  // return new Date(year + "/0" + month + "/0" + day + "T" + hr24 + ":" + min60);
 }
 
 function downloadICS(
@@ -130,7 +135,9 @@ export default function ExplorerJoin() {
     <PageWrapper active={"Explorer Series"} title={"Oasis | Explorer Series"}>
       {/* I think we should use some major graphic at the start of the explore page to make it clear that it's different */}
       <h1 className="text-ex-blue-dark">Major events, open to all.</h1>
-      <p className="text-oa-extra-dark text-opacity-60 italic">Click any date to download, and add to your calendar.</p>
+      <p className="text-oa-extra-dark text-opacity-60 italic">
+        Click any date to download, and add to your calendar.
+      </p>
       <div className="flex flex-col gap-8 mt-4 mb-16">
         {events.map(
           (
@@ -211,7 +218,7 @@ export default function ExplorerJoin() {
                     className=" text-ex-orange drop-shadow-sm group-hover/download:text-ex-dark group-hover/download:animate-bounce"
                     icon={faCalendarPlus}
                   />
-                  <span className="group-hover/download:text-ex-blue-dark">
+                  <span suppressHydrationWarning={true} className="group-hover/download:text-ex-blue-dark">
                     {formatDate(year, month, day, hr24, min60)} - {location} -{" "}
                     {durationMins / 60 === 1
                       ? "1hr"
