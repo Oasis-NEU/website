@@ -8,7 +8,7 @@ export default function MentorAppsBanner({
   const buttons = [
     {
       buttonTitle: "Click Here to Apply!",
-      href: "https://docs.google.com/forms/d/e/1FAIpQLScRNM6L61jOBsWZZLRXU75EVRcrYAjEFxN-NC6wIHqdwhSW2Q/viewform?usp=sf_link",
+      href: "https://forms.gle/s2WDFkG3QEtKCP45A",
     },
     {
       buttonTitle: "Learn more",
