@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function ApplyMentorsRedirect( ) {
-   redirect("https://forms.gle/BewBtjLDJJ3oGZrc7")
+   redirect("https://forms.gle/s2WDFkG3QEtKCP45A")
 }
