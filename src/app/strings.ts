@@ -172,7 +172,12 @@ const strings = {
       {
         title: "Why",
         tagline:
-          "Teach participants how to learn the skills they need to bring their projects to life! If you've completed a co-op and are free from 12-2pm on Sundays, then you're ready to mentor.",
+          "Introduce students to computer science by teaching participants how to learn the skills they need to bring their projects to life!",
+      },
+      {
+        title: "What",
+        tagline:
+          "Every Sunday from 12-2pm, mentors work with two teams of four students each to guide them through their making first web apps.",
       },
       {
         title: "Who",
@@ -180,12 +185,7 @@ const strings = {
           "Any Northeastern student who has started at least one computer science co-op. Both graduate and undergraduate students are welcome!",
       },
       {
-        title: "What",
-        tagline:
-          "Mentors work with two teams of four students each to guide them through their making first web apps.",
-      },
-      {
-        title: "Why",
+        title: "How",
         tagline:
           "A low-commitment chance to mentor students and help them turn their ideas into reality!",
       },

@@ -5,9 +5,13 @@ import twMerge from "../../../twMerge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAppStoreIos, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 import { faFish, faRocket } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
+import RocketImage from "public/images/Space rocket with flames.jpg";
+import { useRef } from "react";
+import Hook from "@/components/Hook";
 
 function formatDate(
   year: number,
@@ -27,9 +31,9 @@ function formatDate(
   // return new Date(month + "-" + day + "-" + year + "T" + hr24 + ":" + min60 + ":00")
 
   return new Date(year, month, day, hr24, min60, 0, 0)
-  .toLocaleDateString("en-US", options)
-  .replace(":00", "")
-  .replace("12 PM", "noon");
+    .toLocaleDateString("en-US", options)
+    .replace(":00", "")
+    .replace("12 PM", "noon");
 
   // return new Date(year + "/0" + month + "/0" + day + "T" + hr24 + ":" + min60);
 }
@@ -131,141 +135,164 @@ export default function ExplorerJoin() {
     },
   ];
 
+  const ref = useRef<HTMLDivElement>(null);
+
   return (
-    <PageWrapper active={"Explorer Series"} title={"Oasis | Explorer Series"}>
-      {/* I think we should use some major graphic at the start of the explore page to make it clear that it's different */}
-      <h1 className="text-ex-blue-dark">Major events, open to all.</h1>
-      <p className="text-oa-extra-dark text-opacity-60 italic">
-        Click any date to download, and add to your calendar.
-      </p>
-      <div className="flex flex-col gap-8 mt-4 mb-16">
-        {events.map(
-          (
-            {
-              title,
-              description,
-              year,
-              month,
-              day,
-              hr24,
-              min60,
-              durationMins,
-              location,
-              icon,
-              redacted,
-            },
-            i
-          ) => (
-            <div
-              key={i}
-              className={twMerge(
-                "flex gap-0 md:flex-row flex-col w-full items-start max-w-3xl p-4 bg-ex-blue-pastel bg-opacity-30 shadow-md rounded-lg relative group -ml-0",
-                i % 2 === 0 ? "md:mr-24 mr-12" : "md:ml-24 ml-0"
-              )}
-            >
-              {i % 2 === 0 ? (
+    <>
+      <Image
+        alt="Rocket shooting into the stars"
+        src={RocketImage}
+        className="max-h-[30vh] object-cover object-right"
+      />
+      <div ref={ref}>
+        <PageWrapper
+          active={"Explorer Series"}
+          title={"Oasis | Explorer Series"}
+          theme={{
+            bgColor: "bg-ex-blue-dark",
+            hoverBg: "hover:bg-ex-blue",
+            textColor: "hover:text-oa-extra-light",
+            selectColor: "bg-ex-blue"
+          }}
+        >
+          <h1 className="text-ex-blue-dark">Explorer Series</h1>
+          <h2 className="text-ex-blue text-xl italic">
+            Major events, open to all.
+          </h2>
+          <div className="flex flex-col gap-8 mt-4 mb-16">
+            {events.map(
+              (
+                {
+                  title,
+                  description,
+                  year,
+                  month,
+                  day,
+                  hr24,
+                  min60,
+                  durationMins,
+                  location,
+                  icon,
+                  redacted,
+                },
+                i
+              ) => (
                 <div
-                  className={
-                    i === events.length - 1 ? "hidden" : "md:block hidden"
-                  }
+                  key={i}
+                  className={twMerge(
+                    "flex gap-0 md:flex-row flex-col w-full items-start max-w-3xl p-4 bg-ex-blue-pastel bg-opacity-30 shadow-md rounded-lg relative group -ml-0",
+                    i % 2 === 0 ? "md:mr-24 mr-12" : "md:ml-24 ml-0"
+                  )}
                 >
-                  <div className="absolute translate-x-4 md:translate-x-12 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                  <div className="absolute translate-x-4 md:translate-x-12 translate-y-8 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                  <div className="absolute translate-x-4 md:translate-x-12 right-0 top-1/2 bottom-0 w-4 md:w-12 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                  {i % 2 === 0 ? (
+                    <div
+                      className={
+                        i === events.length - 1 ? "hidden" : "md:block hidden"
+                      }
+                    >
+                      <div className="absolute translate-x-4 md:translate-x-12 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                      <div className="absolute translate-x-4 md:translate-x-12 translate-y-8 right-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                      <div className="absolute translate-x-4 md:translate-x-12 right-0 top-1/2 bottom-0 w-4 md:w-12 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                    </div>
+                  ) : (
+                    <div
+                      className={
+                        i === events.length - 1 ? "hidden" : "md:block hidden"
+                      }
+                    >
+                      <div className="absolute -translate-x-4 md:-translate-x-12 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                      <div className="absolute -translate-x-4 md:-translate-x-12 translate-y-8 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                      <div className="absolute -translate-x-4 md:-translate-x-12 left-0 top-1/2 bottom-0 md:w-12 w-4 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
+                    </div>
+                  )}
+                  <div className="rounded-lg absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-tr from-ex-blue to-oa-extra-light opacity-[15%] group-hover:opacity-20 transition-all duration-50"></div>
+                  <div className="rounded-md shadow-md bg-oa-light p-4 z-10 md:mb-0 mb-4">
+                    <FontAwesomeIcon
+                      size="3x"
+                      className="text-ex-orange drop-shadow-sm"
+                      icon={icon}
+                    />
+                  </div>
+                  <div className="flex flex-col z-10 w-full flex-1 md:pl-4">
+                    <h3 className="text-ex-dark">{title}</h3>
+                    {!redacted && (
+                      <p className="text-ex-blue-dark">{description}</p>
+                    )}
+                    <button
+                      onClick={() =>
+                        downloadICS(
+                          title,
+                          year,
+                          month,
+                          day,
+                          hr24,
+                          min60,
+                          durationMins,
+                          description,
+                          location
+                        )
+                      }
+                      className="text-oa-dark italic p-2 bg-oa-light hover:bg-ex-blue-pastel rounded-full px-4 mt-4 w-fit shadow-sm hover:shadow-md hover:ring-2 ring-ex-blue-dark transition-all duration-150 flex flex-row gap-2 group/download"
+                    >
+                      <FontAwesomeIcon
+                        size="lg"
+                        className=" text-ex-orange drop-shadow-sm group-hover/download:text-ex-dark group-hover/download:animate-bounce"
+                        icon={faCalendarPlus}
+                      />
+                      <span
+                        suppressHydrationWarning={true}
+                        className="group-hover/download:text-ex-blue-dark"
+                      >
+                        {formatDate(year, month, day, hr24, min60)} - {location}{" "}
+                        -{" "}
+                        {durationMins / 60 === 1
+                          ? "1hr"
+                          : durationMins / 60 + "hrs"}{" "}
+                      </span>
+                    </button>
+                  </div>
                 </div>
-              ) : (
-                <div
-                  className={
-                    i === events.length - 1 ? "hidden" : "md:block hidden"
-                  }
-                >
-                  <div className="absolute -translate-x-4 md:-translate-x-12 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                  <div className="absolute -translate-x-4 md:-translate-x-12 translate-y-8 left-0 bottom-0 w-2 h-1/2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                  <div className="absolute -translate-x-4 md:-translate-x-12 left-0 top-1/2 bottom-0 md:w-12 w-4 h-2 bg-ex-orange-pastel flex flex-row-reverse"></div>
-                </div>
-              )}
-              <div className="rounded-lg absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-tr from-ex-blue to-oa-extra-light opacity-[15%] group-hover:opacity-20 transition-all duration-50"></div>
-              <div className="rounded-md shadow-md bg-oa-light p-4 z-10 md:mb-0 mb-4">
-                <FontAwesomeIcon
-                  size="3x"
-                  className="text-ex-orange drop-shadow-sm"
-                  icon={icon}
-                />
-              </div>
-              <div className="flex flex-col z-10 w-full flex-1 md:pl-4">
-                <h3 className="text-ex-dark">{title}</h3>
-                {!redacted && (
-                  <p className="text-ex-blue-dark">{description}</p>
-                )}
-                <button
-                  onClick={() =>
-                    downloadICS(
-                      title,
-                      year,
-                      month,
-                      day,
-                      hr24,
-                      min60,
-                      durationMins,
-                      description,
-                      location
-                    )
-                  }
-                  className="text-oa-dark italic p-2 bg-oa-light hover:bg-ex-blue-pastel rounded-full px-4 mt-4 w-fit shadow-sm hover:shadow-md hover:ring-2 ring-ex-blue-dark transition-all duration-150 flex flex-row gap-2 group/download"
-                >
-                  <FontAwesomeIcon
-                    size="lg"
-                    className=" text-ex-orange drop-shadow-sm group-hover/download:text-ex-dark group-hover/download:animate-bounce"
-                    icon={faCalendarPlus}
-                  />
-                  <span suppressHydrationWarning={true} className="group-hover/download:text-ex-blue-dark">
-                    {formatDate(year, month, day, hr24, min60)} - {location} -{" "}
-                    {durationMins / 60 === 1
-                      ? "1hr"
-                      : durationMins / 60 + "hrs"}{" "}
-                  </span>
-                </button>
-              </div>
-            </div>
-          )
-        )}
-      </div>
-      <h1 className="text-ex-blue-dark mb-4">
-        Built with{" "}
-        <span className="relative group hover:drop-shadow-xl">
-          <Link
-            target="_blank"
-            className="text-ex-blue relative group-hover:text-red-500  transition-all duration-150"
-            href="/resources"
-          >
-            Resources
-          </Link>
-          <div className="absolute left-0 right-0 h-[0.3rem] -translate-y-2 rounded-full bg-ex-blue  group-hover:bg-red-500 group-hover:drop-shadow-md transition-all duration-150 bottom-0"></div>
-        </span>{" "}
-        in mind
-      </h1>
-      <p className="mb-12 max-w-3xl">
-        Sessions are designed to set you up for success on your own. Learn the
-        basics, and then use async resources to continue your journey. Our
-        tailor-made resources match up with presentations and provide
-        supplemental materials for you to reference long afterwards.
-      </p>
-      <h1 className="text-ex-blue-dark mb-4">By the numbers</h1>
-      <div className="max-w-3xl grid grid-rows-2 grid-cols-1 sm:grid-cols-3 md:grid-rows-1 gap-8 items-center justify-center">
-        {[
-          { count: 109, content: "HS0 Attendees" },
-          { count: 32, content: "Resource Pages" },
-          { count: 5, content: "Topic Areas" },
-        ].map((obj, i) => (
-          <div
-            key={i}
-            className="bg-oa-extra-light rounded-3xl flex flex-col items-center justify-center max-w-md w-full p-4 h-48 shadow-md"
-          >
-            <h2 className="text-ex-orange text-6xl mb-2">{obj.count}</h2>
-            <p className="text-oa-gray text-center">{obj.content}</p>
+              )
+            )}
           </div>
-        ))}
+          <h1 className="text-ex-blue-dark mb-4">
+            Built with{" "}
+            <span className="relative group hover:drop-shadow-xl">
+              <Link
+                target="_blank"
+                className="text-ex-blue relative group-hover:text-red-500  transition-all duration-150"
+                href="/resources"
+              >
+                Resources
+              </Link>
+              <div className="absolute left-0 right-0 h-[0.3rem] -translate-y-2 rounded-full bg-ex-blue  group-hover:bg-red-500 group-hover:drop-shadow-md transition-all duration-150 bottom-0"></div>
+            </span>{" "}
+            in mind
+          </h1>
+          <p className="mb-12 max-w-3xl">
+            Sessions are designed to set you up for success on your own. Learn
+            the basics, and then use async resources to continue your journey.
+            Our tailor-made resources match up with presentations and provide
+            supplemental materials for you to reference long afterwards.
+          </p>
+          <h1 className="text-ex-blue-dark mb-4">By the numbers</h1>
+          <div className="max-w-3xl grid grid-rows-2 grid-cols-1 sm:grid-cols-3 md:grid-rows-1 gap-8 items-center justify-center">
+            {[
+              { count: 109, content: "HS0 Attendees" },
+              { count: 32, content: "Resource Pages" },
+              { count: 5, content: "Topic Areas" },
+            ].map((obj, i) => (
+              <div
+                key={i}
+                className="bg-oa-extra-light rounded-3xl flex flex-col items-center justify-center max-w-md w-full p-4 h-48 shadow-md"
+              >
+                <h2 className="text-ex-orange text-6xl mb-2">{obj.count}</h2>
+                <p className="text-oa-gray text-center">{obj.content}</p>
+              </div>
+            ))}
+          </div>
+        </PageWrapper>
       </div>
-    </PageWrapper>
+    </>
   );
 }
