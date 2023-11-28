@@ -9,9 +9,8 @@ import Image from "next/image";
 import { faFish, faRocket } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
-import RocketImage from "public/images/Space rocket with flames.jpg";
+import RocketImage from "/images/rocket.jpg";
 import { useRef } from "react";
-import Hook from "@/components/Hook";
 
 function formatDate(
   year: number,
