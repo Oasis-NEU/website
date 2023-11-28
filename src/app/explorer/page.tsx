@@ -9,7 +9,6 @@ import Image from "next/image";
 import { faFish, faRocket } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
-import RocketImage from "/images/rocket.jpg";
 import { useRef } from "react";
 
 function formatDate(
@@ -140,8 +139,10 @@ export default function ExplorerJoin() {
     <>
       <Image
         alt="Rocket shooting into the stars"
-        src={RocketImage}
-        className="max-h-[30vh] object-cover object-right"
+        src={"/images/rocket.jpg"}
+        width={2827}
+        height={1456}
+        className="max-h-[30vh] object-cover object-right-top"
       />
       <div ref={ref}>
         <PageWrapper
