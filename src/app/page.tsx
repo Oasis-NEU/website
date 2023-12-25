@@ -27,8 +27,8 @@ export default function Home() {
       />
       <div ref={ref}>
         <PageWrapper active="Home">
-          {/* <InfoSessionBanner /> */}
-          <div className="flex md:flex-row flex-col md:gap-8">
+          <InfoSessionBanner />
+          {/* <div className="flex md:flex-row flex-col md:gap-8">
             <MentorAppsBanner />
             <BannerCard
               title={"Leadership Team Applications are open!!"}
@@ -43,7 +43,7 @@ export default function Home() {
                 <b className="text-oa-green italic">Tuesday, December 5th</b>.
               </span>
             </BannerCard>
-          </div>
+          </div> */}
           <SeriesBlock />
           <MissionBlock />
           <HistoryBlock />

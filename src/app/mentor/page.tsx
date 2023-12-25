@@ -9,12 +9,15 @@ import BannerCard from "@/components/BannerCard";
 import EmailSignup from "@/components/EmailSignup";
 import Link from "next/link";
 import MentorAppsBanner from "@/components/MentorAppsBanner";
+import MissionBlock from "@/components/MissionBlock";
+import HistoryBlock from "@/components/HistoryBlock";
+import HackSessionTimeline from "@/components/HackSessionTimeline";
 
 export default function Mentor() {
   return (
     <PageWrapper active={"Mentor"} title={"Oasis | Be a mentor!"}>
       {/* <MentorHeader /> */}
-      <MentorAppsBanner hideLearnMore={true} />
+      {/* <MentorAppsBanner hideLearnMore={true} /> */}
       {/* <BannerCard title={""} buttons={[]}>
         Mentor applications are currently closed. Please feel free to reach out
         with questions by emailing{" "}
@@ -24,7 +27,13 @@ export default function Mentor() {
         , and stay up to date by signing up for our mailing list.
         <EmailSignup purpose={"websiteMentorAppsClosed"} />
       </BannerCard> */}
-      <MentorBlock />
+      <h1 className="mt-12">Be a mentor!</h1>
+      <div className="p-12 pt-0 mt-12 mb-8 bg-oa-green-pastel bg-opacity-50 rounded-xl">
+        <MentorBlock />
+      </div>
+      <HackSessionTimeline />
+      <MissionBlock />
+      <HistoryBlock />
     </PageWrapper>
   );
 }

@@ -27,7 +27,7 @@ export default function Eboard() {
     },
     {
       name: "Laith Taher",
-      role: "Events Director",
+      role: "Explorer Series Director",
       src: "/images/Eboard/Laith.jpg",
     },
     {
@@ -39,6 +39,16 @@ export default function Eboard() {
       name: "Isha Chadalavada",
       role: "Marketing Director",
       src: "/images/Eboard/Isha.jpg",
+    },
+    {
+      name: "Marguerite Collette",
+      role: "Resources Director",
+      src: "/images/Eboard/maggie.jpeg",
+    },
+    {
+      name: "Jayson Sella",
+      role: "Program Coordinator",
+      src: "/images/Eboard/jay.jpg",
     },
   ];
 

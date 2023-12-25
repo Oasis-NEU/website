@@ -3,10 +3,10 @@
 import PageWrapper from "@/components/PageWrapper";
 import twMerge from "../../../twMerge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAppStoreIos, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import { faFish, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faMobilePhone, faProjectDiagram, faServer } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
 import { useRef } from "react";
@@ -76,13 +76,13 @@ function downloadICS(
 export default function ExplorerJoin() {
   const events = [
     {
-      title: "Hack Session 0: Git Started",
+      title: "Hack Session 0",
       description:
-        "Learn the foundational basics of Git and React so you can build websites collaboratively with a team, either as part of the Project Series or on your own with the help of our Resources.",
-      icon: faGithub,
-      year: 2023,
-      month: 9,
-      day: 17,
+        "Learn the basics of teaming, ideation, project management, and UI/UX design so you're prepared with the skills you need to plan your project.",
+      icon: faProjectDiagram,
+      year: 2024,
+      month: 1,
+      day: 21,
       hr24: 12,
       min60: 0,
       durationMins: 120,
@@ -90,45 +90,73 @@ export default function ExplorerJoin() {
       redacted: false,
     },
     {
-      title: "Full Stack Launchpad",
+      title: "EX1: Git Started",
       description:
-        "In collaboration with Disrupt, we'll teach you the basics of databases using Supabase, and then introduce some essentials of SQL to help you make masterful queries. Can't wait to see you there!",
-      icon: faRocket,
-      year: 2023,
-      month: 10,
-      day: 12,
-      hr24: 18,
+        "Learn the foundational basics of Git, HTML, and CSS so you can build websites collaboratively with a team, either as part of the Project Series or on your own with the help of our Resources.",
+      icon: faGithub,
+      year: 2024,
+      month: 2,
+      day: 1,
+      hr24: 6,
       min60: 0,
       durationMins: 90,
-      location: "Richards 300",
+      location: "TBA",
       redacted: false,
     },
     {
-      title: "Intro to iOS App Dev",
+      title: "EX2: React Essentials",
       description:
-        "In collaboration with MULTI, we're teaching you how to build iOS apps with SwiftUI! We'll walk through the basics of Swift, how to build user interfaces, and how to add interactivity. No prior experience necessary, but a Mac is required.",
-      icon: faAppStoreIos,
-      year: 2023,
-      month: 10,
-      day: 25,
-      hr24: 19,
+        "Expand on the basics of Git and learn essential React skills such as components and state.",
+      icon: faReact,
+      year: 2024,
+      month: 2,
+      day: 8,
+      hr24: 6,
       min60: 0,
-      durationMins: 60,
-      location: "Curry 144",
+      durationMins: 90,
+      location: "TBA",
       redacted: false,
     },
     {
-      title: "RESTful APIs",
+      title: "EX3: APIs & Databases",
       description:
-        "Come learn how to use RESTful APIs in your web apps. We'll walk through what they are, and then build a site that makes use of them together! We'll have time at the end for mentors to float and help you 1-on-1, as well as providing an online option for students on other Northeastern campuses. See you there!",
-      icon: faFish,
-      year: 2023,
-      month: 11,
-      day: 2,
-      hr24: 19,
+        "Learn to connect your web app with an API and then design a relational database in Supabase and connect it to your app.",
+      icon: faDatabase,
+      year: 2024,
+      month: 2,
+      day: 15,
+      hr24: 6,
       min60: 0,
-      durationMins: 60,
-      location: "WVH 212",
+      durationMins: 90,
+      location: "TBA",
+      redacted: false,
+    },
+    {
+      title: "EX4: iOS Apps",
+      description:
+        "Learn the basics of app development for iOS using Xcode. It's required to have a Mac with Xcode downloaded for this session.",
+      icon: faMobilePhone,
+      year: 2024,
+      month: 3,
+      day: 21,
+      hr24: 6,
+      min60: 0,
+      durationMins: 90,
+      location: "TBA",
+      redacted: false,
+    },
+    {
+      title: "EX5: Deployment",
+      description:
+        "Learn to deploy your web app to the public using Netlify. Then we will have open Q&A to help you troubleshoot your web apps.",
+      icon: faServer,
+      year: 2024,
+      month: 3,
+      day: 28,
+      hr24: 6,
+      min60: 0,
+      durationMins: 90,
+      location: "TBA",
       redacted: false,
     },
   ];
@@ -152,7 +180,7 @@ export default function ExplorerJoin() {
             bgColor: "bg-ex-blue-dark",
             hoverBg: "hover:bg-ex-blue",
             textColor: "hover:text-oa-extra-light",
-            selectColor: "bg-ex-blue"
+            selectColor: "bg-ex-blue",
           }}
         >
           <h1 className="text-ex-blue-dark">Explorer Series</h1>
