@@ -22,12 +22,12 @@ export default function Eboard() {
     },
     {
       name: "Allen Lin",
-      role: "Mentor Lead",
+      role: "Head Mentor",
       src: "/images/Eboard/allen.png",
     },
     {
       name: "Laith Taher",
-      role: "Explorer Series Director",
+      role: "Project Series Director, Explorer Series Director",
       src: "/images/Eboard/Laith.jpg",
     },
     {
@@ -37,7 +37,7 @@ export default function Eboard() {
     },
     {
       name: "Isha Chadalavada",
-      role: "Marketing Director",
+      role: "Resources Director",
       src: "/images/Eboard/Isha.jpg",
     },
     {
@@ -47,12 +47,12 @@ export default function Eboard() {
     },
     {
       name: "Jayson Sella",
-      role: "Program Coordinator",
+      role: "Project Series Directors",
       src: "/images/Eboard/jay.jpg",
-    },// TODO:
+    },
     {
       name: "Ashley Davis",
-      role: "Explorer Director",
+      role: "Explorer Series Director",
       src: "/images/Eboard/ashley.jpeg",
     },
     {
