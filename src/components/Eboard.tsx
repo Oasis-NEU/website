@@ -27,7 +27,7 @@ export default function Eboard() {
     },
     {
       name: "Laith Taher",
-      role: "Project Series Director, Explorer Series Director",
+      role: "Project & Explorer Series Director",
       src: "/images/Eboard/Laith.jpg",
     },
     {
