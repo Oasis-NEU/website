@@ -49,6 +49,21 @@ export default function Eboard() {
       name: "Jayson Sella",
       role: "Program Coordinator",
       src: "/images/Eboard/jay.jpg",
+    },// TODO:
+    {
+      name: "Ashley Davis",
+      role: "Explorer Director",
+      src: "/images/Eboard/ashley.jpeg",
+    },
+    {
+      name: "Cee Latkar",
+      role: "Marketing Core Director",
+      src: "/images/Eboard/cee.jpeg",
+    },
+    {
+      name: "Harini Avula",
+      role: "Marketing Spotlight Director",
+      src: "/images/Eboard/harini.jpeg",
     },
   ];
 
