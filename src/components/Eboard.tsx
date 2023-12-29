@@ -47,7 +47,7 @@ export default function Eboard() {
     },
     {
       name: "Jayson Sella",
-      role: "Project Series Directors",
+      role: "Project Series Director",
       src: "/images/Eboard/jay.jpg",
     },
     {
@@ -88,7 +88,7 @@ export default function Eboard() {
             )}
 
             <h3>{name}</h3>
-            <p>{role}</p>
+            <p className="text-center">{role}</p>
           </div>
         ))}
       </div>
