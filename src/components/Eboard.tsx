@@ -16,14 +16,9 @@ export default function Eboard() {
       src: "/images/Eboard/sama.png",
     },
     {
-      name: "Rei Masuya",
-      role: "Brand Designer",
-      src: "/images/Eboard/rei.jpg",
-    },
-    {
-      name: "Allen Lin",
-      role: "Head Mentor",
-      src: "/images/Eboard/allen.png",
+      name: "Caitlin Flynn",
+      role: "Operations Director",
+      src: "/images/Eboard/Caitlin.jpeg",
     },
     {
       name: "Laith Taher",
@@ -31,9 +26,19 @@ export default function Eboard() {
       src: "/images/Eboard/Laith.jpg",
     },
     {
-      name: "Caitlin Flynn",
-      role: "Operations Director",
-      src: "/images/Eboard/Caitlin.jpeg",
+      name: "Jayson Sella",
+      role: "Project Series Director",
+      src: "/images/Eboard/jay.jpg",
+    },
+    {
+      name: "Ashley Davis",
+      role: "Explorer Series Director",
+      src: "/images/Eboard/ashley.jpeg",
+    },
+    {
+      name: "Allen Lin",
+      role: "Head Mentor",
+      src: "/images/Eboard/allen.png",
     },
     {
       name: "Isha Chadalavada",
@@ -46,14 +51,9 @@ export default function Eboard() {
       src: "/images/Eboard/maggie.jpeg",
     },
     {
-      name: "Jayson Sella",
-      role: "Project Series Director",
-      src: "/images/Eboard/jay.jpg",
-    },
-    {
-      name: "Ashley Davis",
-      role: "Explorer Series Director",
-      src: "/images/Eboard/ashley.jpeg",
+      name: "Rei Masuya",
+      role: "Brand Designer",
+      src: "/images/Eboard/rei.jpg",
     },
     {
       name: "Cee Latkar",
