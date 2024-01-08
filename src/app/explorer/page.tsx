@@ -28,10 +28,9 @@ function formatDate(
 
   // return new Date(month + "-" + day + "-" + year + "T" + hr24 + ":" + min60 + ":00")
 
-  return new Date(year, month, day, hr24, min60, 0, 0)
+  return new Date(year, month - 1, day, hr24, min60, 0, 0)
     .toLocaleDateString("en-US", options)
     .replace(":00", "")
-    .replace("12 PM", "noon");
 
   // return new Date(year + "/0" + month + "/0" + day + "T" + hr24 + ":" + min60);
 }
@@ -81,11 +80,11 @@ export default function ExplorerJoin() {
         "Learn the basics of teaming, ideation, project management, and UI/UX design so you're prepared with the skills you need to plan your project.",
       icon: faProjectDiagram,
       year: 2024,
-      month: 1-1,
-      day: 21,
-      hr24: 12+12,
+      month: 1,
+      day: 14,
+      hr24: 12,
       min60: 0,
-      durationMins: 120,
+      durationMins: 60,
       location: "Behrakis 010",
       redacted: false,
     },
@@ -95,8 +94,8 @@ export default function ExplorerJoin() {
         "Learn the foundational basics of Git, HTML, and CSS so you can build websites collaboratively with a team, either as part of the Project Series or on your own with the help of our Resources.",
       icon: faGithub,
       year: 2024,
-      month: 2-1,
-      day: 1,
+      month: 1,
+      day: 28,
       hr24: 12+6,
       min60: 0,
       durationMins: 90,
@@ -109,7 +108,7 @@ export default function ExplorerJoin() {
         "Expand on the basics of Git and learn essential React skills such as components and state.",
       icon: faReact,
       year: 2024,
-      month: 2-1,
+      month: 2,
       day: 8,
       hr24: 12+6,
       min60: 0,
@@ -123,7 +122,7 @@ export default function ExplorerJoin() {
         "Learn to connect your web app with an API and then design a relational database in Supabase and connect it to your app.",
       icon: faDatabase,
       year: 2024,
-      month: 2-1,
+      month: 2,
       day: 15,
       hr24: 12+6,
       min60: 0,
@@ -137,7 +136,7 @@ export default function ExplorerJoin() {
         "Learn the basics of app development for iOS using Xcode. It's required to have a Mac with Xcode downloaded for this session.",
       icon: faMobilePhone,
       year: 2024,
-      month: 3-1,
+      month: 3,
       day: 21,
       hr24: 12+6,
       min60: 0,
@@ -151,7 +150,7 @@ export default function ExplorerJoin() {
         "Learn to deploy your web app to the public using Netlify. Then we will have open Q&A to help you troubleshoot your web apps.",
       icon: faServer,
       year: 2024,
-      month: 3-1,
+      month: 3,
       day: 28,
       hr24: 12+6,
       min60: 0,
@@ -179,7 +178,7 @@ export default function ExplorerJoin() {
           theme={{
             bgColor: "bg-ex-blue-dark",
             hoverBg: "hover:bg-ex-blue",
-            textColor: "hover:text-oa-extra-light text-ex-blue-dark",
+            textColor: "hover:text-oa-extra-light",
             selectColor: "bg-ex-blue",
           }}
         >
@@ -271,7 +270,7 @@ export default function ExplorerJoin() {
                         suppressHydrationWarning={true}
                         className="group-hover/download:text-ex-blue-dark"
                       >
-                        {formatDate(year, month, day, hr24, min60)} - {location}{" "}
+                        {formatDate(year, month, day, hr24, min60)} | {location}{" "}
                         -{" "}
                         {durationMins / 60 === 1
                           ? "1hr"
