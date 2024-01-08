@@ -76,7 +76,7 @@ export default function NavBar({
             >
               {strings.NavBar.destinations.map(({ name, link, target }, i) => (
                 <Link
-                  className={`hover:shadow-md hover:text-oa-green transition-all duration-150 ${hoverBg} hover:rounded-md p-2 px-4`}
+                  className={`hover:shadow-md ${textColor} transition-all duration-150 ${hoverBg} hover:rounded-md p-2 px-4`}
                   href={link}
                   target={target}
                   key={i}

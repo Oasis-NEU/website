@@ -179,7 +179,7 @@ export default function ExplorerJoin() {
           theme={{
             bgColor: "bg-ex-blue-dark",
             hoverBg: "hover:bg-ex-blue",
-            textColor: "hover:text-oa-extra-light",
+            textColor: "hover:text-oa-extra-light text-ex-blue-dark",
             selectColor: "bg-ex-blue",
           }}
         >
