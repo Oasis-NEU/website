@@ -152,7 +152,7 @@ const strings = {
       },
       {
         q: "Do I have to be at the Info Session?",
-        a: "Sort of. We don't require you come to the Info Session, but we would like to warn that it's highly unlikely you'll be able to reserve a spot if you're not because we open Registration at the Info Session.",
+        a: "Sort of. We don't require you come to the Info Session, but we would like to warn that it's highly unlikely you'll be able to reserve a spot if you're not because students apply as a group and we facilitate finding a group during both the Info Session and Hack Session 1.",
       },
       {
         q: "What technologies and languages will I learn with Oasis?",
