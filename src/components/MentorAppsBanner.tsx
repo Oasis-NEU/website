@@ -21,9 +21,9 @@ export default function MentorAppsBanner({
       buttons={hideLearnMore ? buttons.slice(0, 1) : buttons.slice(0, 2)}
     >
       <>
-        Apply now for our mentor role for the upcoming Spring 2024 semester!
-        Applications close{" "}
-        <b className="text-oa-blue italic">Monday, December 18th</b>.
+        Mentor Applications are shortly re-opened for the Spring semester. Apply now!
+        Applications close again at{" "}
+        <b className="text-oa-blue italic">midnight, Monday, January 15th</b>.
       </>
     </BannerCard>
   );
