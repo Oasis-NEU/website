@@ -81,7 +81,7 @@ export default function ExplorerJoin() {
       icon: faProjectDiagram,
       year: 2024,
       month: 1,
-      day: 14,
+      day: 21,
       hr24: 12,
       min60: 0,
       durationMins: 60,
