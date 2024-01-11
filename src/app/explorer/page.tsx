@@ -165,11 +165,11 @@ export default function ExplorerJoin() {
   return (
     <>
       <Image
-        alt="Rocket shooting into the stars"
-        src={"/images/rocket.jpg"}
+        alt="Mountains behind a lake"
+        src={"/images/explorer.png"}
         width={2827}
         height={1456}
-        className="max-h-[30vh] object-cover object-right-top"
+        className="max-h-[40vh] object-cover"
       />
       <div ref={ref}>
         <PageWrapper
