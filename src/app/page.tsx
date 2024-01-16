@@ -27,7 +27,7 @@ export default function Home() {
       />
       <div ref={ref}>
         <PageWrapper active="Home">
-          <InfoSessionBanner />
+          {/* <InfoSessionBanner /> */}
           {/* <div className="flex md:flex-row flex-col md:gap-8">
             <MentorAppsBanner />
             <BannerCard
