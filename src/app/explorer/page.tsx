@@ -112,7 +112,7 @@ export default function ExplorerJoin() {
       day: 8,
       hr24: 12+7,
       min60: 0,
-      durationMins: 90,
+      durationMins: 60,
       location: "WVH 110",
       redacted: false,
     },
@@ -127,7 +127,7 @@ export default function ExplorerJoin() {
       hr24: 12+7,
       min60: 0,
       durationMins: 90,
-      location: "WVH 110",
+      location: "Richards 254",
       redacted: false,
     },
     {
