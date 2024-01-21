@@ -305,7 +305,7 @@ export default function ExplorerJoin() {
           <h1 className="text-ex-blue-dark mb-4">By the numbers</h1>
           <div className="max-w-3xl grid grid-rows-2 grid-cols-1 sm:grid-cols-3 md:grid-rows-1 gap-8 items-center justify-center">
             {[
-              { count: 109, content: "HS0 Attendees" },
+              { count: 158, content: "HS0 Attendees" },
               { count: 32, content: "Resource Pages" },
               { count: 5, content: "Topic Areas" },
             ].map((obj, i) => (
