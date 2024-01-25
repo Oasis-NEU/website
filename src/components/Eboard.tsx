@@ -46,7 +46,7 @@ export default function Eboard() {
       src: "/images/Eboard/Isha.jpg",
     },
     {
-      name: "Marguerite Collette",
+      name: "Maggie Collette",
       role: "Resources Director",
       src: "/images/Eboard/maggie.jpeg",
     },
