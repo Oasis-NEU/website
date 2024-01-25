@@ -139,9 +139,9 @@ export default function ExplorerJoin() {
       month: 3,
       day: 21,
       hr24: 12+7,
-      min60: 0,
+      min60: 5,
       durationMins: 90,
-      location: "TBA",
+      location: "WVH 110",
       redacted: false,
     },
     {
@@ -153,9 +153,9 @@ export default function ExplorerJoin() {
       month: 3,
       day: 28,
       hr24: 12+7,
-      min60: 0,
+      min60: 5,
       durationMins: 90,
-      location: "TBA",
+      location: "WVH 110",
       redacted: false,
     },
   ];
