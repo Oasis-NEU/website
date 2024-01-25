@@ -12,6 +12,7 @@ import MentorAppsBanner from "@/components/MentorAppsBanner";
 import BannerCard from "@/components/BannerCard";
 import EmailSignup from "@/components/EmailSignup";
 import Link from "next/link";
+import TimeGatedRegister from "@/components/TimeGatedRegister";
 
 export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,6 +28,7 @@ export default function Home() {
       />
       <div ref={ref}>
         <PageWrapper active="Home">
+          <TimeGatedRegister />
           {/* <InfoSessionBanner /> */}
           {/* <div className="flex md:flex-row flex-col md:gap-8">
             <MentorAppsBanner />
