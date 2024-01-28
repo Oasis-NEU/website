@@ -41,7 +41,7 @@ async function TimeGatedRegisterContents() {
         >
           <p>
             Registration places you on the waiting list. We will send the
-            Commitment form to confirm your spot before end-of-day on Wednesday,
+            Commitment form to confirm your spot before end-of-day on Tuesday,
             January 31st.
           </p>
         </BannerCard>
