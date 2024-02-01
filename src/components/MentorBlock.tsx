@@ -25,13 +25,13 @@ export default function MentorBlock() {
             mobile apps. {"It's"} a low-commitment way to help students turn
             their ideas into a reality!
           </p>
-          <p className="mt-2">
+          {/* <p className="mt-2">
             Additionally, if {"you'd"} like to help contribute to our Resources
             page, in collaboration with Khoury, there are{" "}
             <b className="no-underline">options to be paid</b> hourly as a TA.
             More information about this will be provided during your interview
             if {"you're"} interested in this element.
-          </p>
+          </p> */}
         </div>
         <div>
           <h2 className="text-4xl mb-1">Eligibility</h2>
@@ -39,9 +39,9 @@ export default function MentorBlock() {
             Any Northeastern student who has started at least one computer
             science co-op. You must be available at least 6 of 8 Hack Sessions
             of the semester, and for Demo Day.{" "}
-            <b className="no-underline">
+            {/* <b className="no-underline">
               Both graduate and undergraduate students are welcome!
-            </b>
+            </b> */}
           </p>
         </div>
       </div>
