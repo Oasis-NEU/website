@@ -124,7 +124,7 @@ const strings = {
       { num: "2", date: "2/4", hook: "React Essentials" },
       { num: "3", date: "2/11", hook: "APIs & Databases" },
       { num: "4", date: "2/25", hook: "Styling" },
-      { num: "5", date: "3/3", hook: "Authentication" },
+      { num: "5", date: "3/10", hook: "Authentication" },
       { num: "6", date: "3/17", hook: "Cohort Choice" },
       { num: "7", date: "3/24", hook: "Co-op Panel" },
       { num: "8", date: "3/31", hook: "Deployment & Presenting" },
