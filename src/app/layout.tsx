@@ -4,9 +4,10 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; /* eslint-disable import/first */
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Metadata, ResolvingMetadata } from "next";
 
 export const metadata = {
-  title: "Oasis",
+  title: "Oasis | Home",
   description: "Learn to make your ideas a reality",
 };
 
@@ -15,7 +16,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html lang="en">
       <body>{children}</body>

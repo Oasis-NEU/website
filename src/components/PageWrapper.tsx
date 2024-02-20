@@ -14,10 +14,6 @@ type Props = {
 export default function PageWrapper({ title, active, theme, children }: Props) {
   return (
     <>
-      <Head>
-        <meta name="robots" content="noindex,nofollow" />
-        {title && <title>{title}</title>}
-      </Head>
       <div className="bg-oa-light">
         <NavBar active={active} theme={theme} />
         <div className="max-w-6xl flex flex-col items-center mx-auto pt-8 px-6 mb-16">
