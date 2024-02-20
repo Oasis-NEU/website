@@ -80,6 +80,8 @@ export default function Eboard() {
                 alt={"Profile Image for " + name}
                 width={160}
                 height={160}
+                style={{ width: 'auto', height: 'auto' }}
+
               />
             ) : (
               <div className="rounded-md shadow-md mb-2 w-[160px] h-[160px] bg-oa-green-pastel text-oa-green flex items-center justify-center">
