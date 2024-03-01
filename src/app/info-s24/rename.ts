@@ -1,5 +1,8 @@
 import { redirect } from "next/navigation";
-export default function InfoSessionRedirect() {
+
+export const runtime = "edge";
+
+export async function GET() {
   redirect(
     "https://forms.gle/xr7qHDxYESPDgVgo9"
   );

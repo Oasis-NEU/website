@@ -4,6 +4,6 @@ export const runtime = "edge";
 
 export async function GET() {
   redirect(
-    "https://www.notion.so/oasisneu/Hack-Session-5-Spring-2024-7549facb29a947789503f0de61387257?pvs=4"
+    "https://oasisneu.notion.site/Resources-4e33d41a70ff420ba46f4e55ccb6e719?pvs=4"
   );
 }
