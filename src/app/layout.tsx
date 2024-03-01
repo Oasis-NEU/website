@@ -4,7 +4,10 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; /* eslint-disable import/first */
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Metadata, ResolvingMetadata } from "next";
+
+export interface RootLayoutProps {
+  children: React.ReactNode;
+}
 
 export const metadata = {
   title: "Oasis | Home",
@@ -19,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
-
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
       )}
