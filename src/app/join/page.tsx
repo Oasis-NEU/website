@@ -10,13 +10,14 @@ import HackSessionTimeline from "@/components/HackSessionTimeline";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import InfoSessionBanner from "@/components/InfoSessionBanner";
 import TimeGatedRegister from "@/components/TimeGatedRegister";
+import DemoDayRsvp from "@/components/DemoDayRsvp";
 
 export default function Join() {
 
   return (
     <PageWrapper active={"Project Series"} title={"Oasis | Project Series"}>
+      <DemoDayRsvp />
       {/* <InfoSessionBanner /> */}
-
       {/* <TimeGatedRegister /> */}
       <h1 className="my-4">{"What's the Project Series?"}</h1>
       <p className="mb-12">

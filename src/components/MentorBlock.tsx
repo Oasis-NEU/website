@@ -34,7 +34,7 @@ export default function MentorBlock() {
           </p> */}
         </div>
         <div>
-          <h2 className="text-4xl mb-1">Eligibility</h2>
+          <h2 className="text-4xl mb-1 mt-8">Eligibility</h2>
           <p>
             Any Northeastern student who has started at least one computer
             science co-op. You must be available at least 6 of 8 Hack Sessions

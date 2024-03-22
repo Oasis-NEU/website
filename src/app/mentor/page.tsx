@@ -32,8 +32,10 @@ export default function Mentor() {
         <MentorBlock />
       </div>
       <HackSessionTimeline />
+      <div className="mt-6">
       <MissionBlock />
       <HistoryBlock />
+      </div>
     </PageWrapper>
   );
 }
