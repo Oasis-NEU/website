@@ -16,6 +16,7 @@ import TimeGatedRegister from "@/components/TimeGatedRegister";
 import DemoDayEmbed from "@/components/LumaRegister";
 import LumaRegister from "@/components/LumaRegister";
 import DemoDayRsvp from "@/components/DemoDayRsvp";
+import EboardApps from "@/components/EboardApps";
 
 export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,7 +32,10 @@ export default function Home() {
       />
       <div ref={ref}>
         <PageWrapper active="Home">
-          <DemoDayRsvp />
+          <div className="flex md:flex-row flex-col md:gap-8 mb-12">
+            <DemoDayRsvp />
+            <EboardApps />
+          </div>
           {/* <TimeGatedRegister /> */}
           {/* <InfoSessionBanner /> */}
           {/* <div className="flex md:flex-row flex-col md:gap-8">
