@@ -5,7 +5,7 @@ import TimeGate from "./TimeGate";
 export default function DemoDayRsvp() {
   return (
     <TimeGate closeDate={new Date("Apr 7 2024 13:00 EST")}>
-      <div className="">
+      <div>
         <BannerCard title={"Join us at Demo Day!"} buttons={[]}>
           <div className="flex mb-0 flex-col gap-4 md:items-start">
             <p>

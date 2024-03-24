@@ -22,11 +22,12 @@ const simpleDateString = (date: Date): string =>
 export { simpleDateString };
 
 async function TimeGateComp({ openDate, closeDate, waiting, children }: Props) {
-  const currTime = await fetch("https://worldtimeapi.org/api/timezone/est") // NOTE: EST time zone
+  const currTime =
+    new Date(); /*await fetch("https://worldtimeapi.org/api/timezone/est") // NOTE: EST time zone
     .then((response) => response.json())
     .then((data) => {
       return new Date(data.datetime);
-    });
+    });*/
 
   return (
     <>
