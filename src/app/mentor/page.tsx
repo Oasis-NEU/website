@@ -12,10 +12,12 @@ import MentorAppsBanner from "@/components/MentorAppsBanner";
 import MissionBlock from "@/components/MissionBlock";
 import HistoryBlock from "@/components/HistoryBlock";
 import HackSessionTimeline from "@/components/HackSessionTimeline";
+import DemoDayRsvp from "@/components/DemoDayRsvp";
 
 export default function Mentor() {
   return (
     <PageWrapper active={"Mentor"} title={"Oasis | Be a mentor!"}>
+      <DemoDayRsvp />
       <MentorHeader />
       {/* <MentorAppsBanner hideLearnMore={true} /> */}
       {/* <BannerCard title={""} buttons={[]}>
@@ -33,8 +35,8 @@ export default function Mentor() {
       </div>
       <HackSessionTimeline />
       <div className="mt-6">
-      <MissionBlock />
-      <HistoryBlock />
+        <MissionBlock />
+        <HistoryBlock />
       </div>
     </PageWrapper>
   );
