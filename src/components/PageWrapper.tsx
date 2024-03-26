@@ -8,15 +8,26 @@ type Props = {
   title?: string;
   active: string;
   theme?: NavBarTheme;
+  fullWidthHeight?: boolean;
   children?: ReactNode;
 };
 
-export default function PageWrapper({ title, active, theme, children }: Props) {
+export default function PageWrapper({
+  title,
+  active,
+  theme,
+  fullWidthHeight,
+  children,
+}: Props) {
   return (
     <>
       <div className="bg-oa-light">
         <NavBar active={active} theme={theme} />
-        <div className="max-w-6xl flex flex-col items-center mx-auto pt-8 px-6 mb-16">
+        <div
+          className={`${
+            fullWidthHeight ? "" : "max-w-6xl pt-8 px-6 mb-16"
+          } flex flex-col items-center mx-auto`}
+        >
           {children}
         </div>
         <Sock />
