@@ -78,10 +78,8 @@ export default function Eboard() {
                 className="rounded-md shadow-md mb-2"
                 src={src}
                 alt={"Profile Image for " + name}
-                width={160}
-                height={160}
-                style={{ width: 'auto', height: 'auto' }}
-
+                width={200}
+                height={200}
               />
             ) : (
               <div className="rounded-md shadow-md mb-2 w-[160px] h-[160px] bg-oa-green-pastel text-oa-green flex items-center justify-center">
