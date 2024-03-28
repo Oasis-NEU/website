@@ -16,7 +16,7 @@ export default function ImageParagraph({
 }: Props) {
   return (
     <div className="my-8">
-      <div className="flex-row gap-6 hidden md:flex items-start">
+      <div className="flex-row gap-6 hidden md:flex items-center">
         <Image
           className={
             "mt-5 object-scale-down drop-shadow-md aspect-3/4  h-[240px] w-auto" +

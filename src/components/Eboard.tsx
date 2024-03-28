@@ -72,7 +72,7 @@ export default function Eboard() {
       <h1 className="">{strings.Eboard.title}</h1>
       <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-8">
         {members.map(({ name, role, src }, i) => (
-          <div key={i} className="flex flex-col items-center">
+          <div key={i} className="flex flex-col items-left">
             {src !== "" ? (
               <Image
                 className="rounded-md shadow-md mb-2"
@@ -87,8 +87,8 @@ export default function Eboard() {
               </div>
             )}
 
-            <h3>{name}</h3>
-            <p className="text-center">{role}</p>
+            <h3 className="text-center max-w-[200px]">{name}</h3>
+            <p className="text-center max-w-[200px]">{role}</p>
           </div>
         ))}
       </div>
