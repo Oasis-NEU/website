@@ -46,13 +46,13 @@ const strings = {
   },
   EnrollmentTimeline: {
     title: "Enrollment Timeline",
-    body: "Each semester we welcome a new cohort of students. We're limited in how many students we can accept due to a limited number of available mentors. This process is subject to change each semester, but this is the typical series of events.",
+    body: "Each semester we welcome a new cohort of students. We are limited in how many students we can accept due to a limited number of available mentors. This process is subject to change each semester, but this is the typical series of events.",
     headline:
       "Acceptance is is first-come-first-serve; it is not based on your technical experience or background.",
     steps: [
       {
         num: "1",
-        tag: "Info Session + Registration",
+        tag: "Info Session",
         time: "1st Sunday of the semester",
         desc: "Learn more about what Oasis is, our Hack Session timeline, new changes for this year, and meet our Eboard.",
       },
@@ -122,10 +122,10 @@ const strings = {
       { num: "0", date: "1/21", hook: "Ideation & Design" },
       { num: "1", date: "1/28", hook: "Git & Web Basics" },
       { num: "2", date: "2/4", hook: "React Essentials" },
-      { num: "3", date: "2/11", hook: "APIs & Databases" },
+      { num: "3", date: "2/11", hook: "Databases" },
       { num: "4", date: "2/25", hook: "Styling" },
-      { num: "5", date: "3/10", hook: "Authentication" },
-      { num: "6", date: "3/17", hook: "Cohort Choice" },
+      { num: "5", date: "3/10", hook: "APIs" },
+      { num: "6", date: "3/17", hook: "Authentication" },
       { num: "7", date: "3/24", hook: "Co-op Panel" },
       { num: "8", date: "3/31", hook: "Deployment & Presenting" },
       { num: "D", date: "4/7", hook: "Demo Day!" },
@@ -155,12 +155,12 @@ const strings = {
         a: "Sort of. We don't require you come to the Info Session, but we would like to warn that it's highly unlikely you'll be able to reserve a spot if you're not because students apply as a group and we facilitate finding a group during both the Info Session and Hack Session 1.",
       },
       {
-        q: "What technologies and languages will I learn with Oasis?",
-        a: "At a minimum, you'll learn Git, React, and Supabase. In addition, you'll learn the theory behind these technologies and some project management skills, as well as anything else relevant to your project. Finally, you'll learn to research complex problems and seek out your own solutions for future projects of your own.",
+        q: "What technologies and languages will I alearn with Oasis?",
+        a: "At a minimum, you'll learn how to use React, Git, and Supabase. In addition, you'll learn the theory behind these technologies and some project management skills, as well as anything else relevant to your group's specific project. More generally, you'll learn to research complex problems and seek out your own solutions for future projects of your own.",
       },
       {
         q: "What is the expected weekly time commitment?",
-        a: "We require that all students be present at each Sunday at the two-hour Hack Sessions. You're welcome to work on your project outside of that team if you would like, but it's not required. ",
+        a: "We require that all students be present at each Sunday at the two-hour Hack Sessions. You're welcome to work on your project outside of that team if you would like, but it's not expected. ",
       },
     ],
   },
