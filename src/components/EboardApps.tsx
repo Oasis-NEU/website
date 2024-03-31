@@ -6,7 +6,7 @@ export default function EboardApps() {
   return (
     <TimeGate
       openDate={new Date("Mar 31 2024 11:59")}
-      closeDate={new Date("Apr 14 2024 11:59")}
+      closeDate={new Date("Apr 14 2024 23:59")}
       waiting={
         <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
           {" "}
