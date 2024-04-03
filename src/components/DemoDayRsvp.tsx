@@ -12,7 +12,7 @@ export default function DemoDayRsvp() {
               Come to our end-of-semester showcase,{" "}
               <b className="no-underline italic">Demo Day</b>, from{" "}
               <b className="no-underline italic">
-                12-2pm on Sunday, April 7th in Hurtig 130
+                12-2pm on Sunday, April 7th in Hurtig 129
               </b>{" "}
               to see what our{" "}
               <b className="no-underline italic">Project Series</b> teams have
