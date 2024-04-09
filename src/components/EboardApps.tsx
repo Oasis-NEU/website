@@ -6,7 +6,7 @@ export default function EboardApps() {
   return (
     <TimeGate
       openDate={new Date("Mar 31 2024 11:59")}
-      closeDate={new Date("Apr 14 2024 23:59")}
+      closeDate={new Date("Apr 19 2024 23:59")}
       waiting={
         <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
           {" "}
@@ -18,7 +18,7 @@ export default function EboardApps() {
         <BannerCard title={"Eboard applications are open!"} buttons={[]}>
           <div className="flex mb-0 flex-col gap-4 md:items-start">
             <p>
-              Applications close at midnight on Sunday, April 14th. We look
+              Applications close at midnight on Sunday, April 19th. We look
               forward to reading them! Email{" "}
               <a
                 href="mailto:oasisneu@gmail.com"
