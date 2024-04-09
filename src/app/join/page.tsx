@@ -16,7 +16,6 @@ export default function Join() {
 
   return (
     <PageWrapper active={"Project Series"} title={"Oasis | Project Series"}>
-      <DemoDayRsvp />
       {/* <InfoSessionBanner /> */}
       {/* <TimeGatedRegister /> */}
       <h1 className="my-4">{"What is the Project Series?"}</h1>
