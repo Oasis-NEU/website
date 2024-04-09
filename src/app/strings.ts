@@ -167,7 +167,7 @@ const strings = {
   Logo: {},
   MentorBlock: {
     title: "Mentor",
-    body: "Mentors are the life-blood of Oasis. Without them we cannot run the Project Series or our Explorer events. You'll guide two groups from brainstorming through delivery by teaching them how to research technologies relevant to their project, how to weigh options between features based on deadlines, and you'll help them debug as issues crop up. Mentors are the ones teach participants how to learn the skills they need to bring their projects to life! \nIf you've completed a co-op and are free from 12-2pm on Sundays, then you're ready to mentor.",
+    body: "Mentors are the life-blood of Oasis. Without them we cannot run the Project Series or our Explorer events. You'll guide two groups from brainstorming through delivery by teaching them how to research technologies relevant to their project, how to weigh options between features based on deadlines, and you'll help them debug as issues crop up. Mentors are the ones teach participants how to learn the skills they need to bring their projects to life!",
     points: [
       {
         title: "Why",

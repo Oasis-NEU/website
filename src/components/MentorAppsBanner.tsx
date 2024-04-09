@@ -8,7 +8,7 @@ export default function MentorAppsBanner({
   const buttons = [
     {
       buttonTitle: "Click Here to Apply!",
-      href: "https://forms.gle/s2WDFkG3QEtKCP45A",
+      href: "https://forms.gle/LLQofQoZN7pXA8Jy7",
     },
     {
       buttonTitle: "Learn more",
@@ -21,9 +21,9 @@ export default function MentorAppsBanner({
       buttons={hideLearnMore ? buttons.slice(0, 1) : buttons.slice(0, 2)}
     >
       <>
-        Mentor Applications are shortly re-opened for the Spring semester. Apply now!
-        Applications close again at{" "}
-        <b className="text-oa-blue italic">midnight, Monday, January 15th</b>.
+        Have prior web development experience? Mentor Applications are open for Fall 2024. Apply now!
+        Priority applications close at{" "}
+        <b className="text-oa-blue italic">midnight, Friday, April 19th</b>.
       </>
     </BannerCard>
   );

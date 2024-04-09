@@ -37,7 +37,7 @@ export default function MentorBlock() {
           <h2 className="text-4xl mb-1 mt-8">Eligibility</h2>
           <p>
             Any Northeastern student who has started at least one computer
-            science co-op. You must be available at least 6 of 8 Hack Sessions
+            science co-op or been a Khoury teaching assistant. You must be available at least 7 of 8 Hack Sessions
             of the semester, and for Demo Day.{" "}
             {/* <b className="no-underline">
               Both graduate and undergraduate students are welcome!
