@@ -6,64 +6,54 @@ import Image from "next/image";
 export default function Eboard() {
   const members = [
     {
-      name: "Frank Anderson",
-      role: "Co-Director",
-      src: "/images/Eboard/frank.jpeg",
-    },
-    {
-      name: "Sama Zaki",
-      role: "Co-Director",
-      src: "/images/Eboard/sama.png",
-    },
-    {
-      name: "Caitlin Flynn",
-      role: "Operations Director",
-      src: "/images/Eboard/Caitlin.jpeg",
-    },
-    {
       name: "Laith Taher",
-      role: "Project & Explorer Series Director",
+      role: "Co-Director",
       src: "/images/Eboard/Laith.jpg",
     },
     {
-      name: "Jayson Sella",
-      role: "Project Series Director",
-      src: "/images/Eboard/jay.jpg",
-    },
-    {
-      name: "Ashley Davis",
-      role: "Explorer Series Director",
-      src: "/images/Eboard/ashley.jpeg",
-    },
-    {
-      name: "Allen Lin",
-      role: "Head Mentor",
-      src: "/images/Eboard/allen.png",
-    },
-    {
-      name: "Isha Chadalavada",
-      role: "Resources Director",
-      src: "/images/Eboard/Isha.jpg",
+      name: "Caitlin Flynn",
+      role: "Co-Director",
+      src: "/images/Eboard/Caitlin.jpeg",
     },
     {
       name: "Maggie Collette",
-      role: "Resources Director",
+      role: "Mentor Lead",
       src: "/images/Eboard/maggie.jpeg",
     },
     {
-      name: "Rei Masuya",
-      role: "Brand Designer",
-      src: "/images/Eboard/rei.jpg",
+      name: "Ciaran Flanagan",
+      role: "Project Series Director",
+      src: "/images/Eboard/Ciaran.jpg",
+    },
+    {
+      name: "Eric Kim",
+      role: "Explorer Series Director",
+      src: "/images/Eboard/Eric.jpeg",
+    },
+    {
+      name: "Quella Wang",
+      role: "Resources Director",
+      src: "/images/Eboard/Quella.jpg",
     },
     {
       name: "Cee Latkar",
-      role: "Marketing Core Director",
+      role: "Marketing Co-Director",
       src: "/images/Eboard/cee.jpeg",
     },
     {
       name: "Harini Avula",
-      role: "Marketing Spotlight Director",
+      role: "Marketing Co-Director",
       src: "/images/Eboard/harini.jpeg",
+    },
+    {
+      name: "Abby Elbaum",
+      role: "External Operations",
+      src: "/images/Eboard/Abby.jpg",
+    },
+    {
+      name: "Rachel Chertok",
+      role: "Internal Operations",
+      src: "/images/Eboard/Rachel.jpg",
     },
   ];
 
