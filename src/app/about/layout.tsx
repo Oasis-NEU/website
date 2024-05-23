@@ -8,3 +8,4 @@ export const metadata = {
 export default function Layout(props: PropsWithChildren) {
   return <>{props.children}</>;
 }
+ 
