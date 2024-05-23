@@ -17,7 +17,7 @@ import DemoDayRsvp from "@/components/DemoDayRsvp";
 export default function Mentor() {
   return (
     <PageWrapper active={"Mentor"} title={"Oasis | Be a mentor!"}>
-      <MentorAppsBanner hideLearnMore={true}/>
+      <MentorAppsBanner hideLearnMore={true} />
       <MentorHeader />
       {/* <MentorAppsBanner hideLearnMore={true} /> */}
       {/* <BannerCard title={""} buttons={[]}>
