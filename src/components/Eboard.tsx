@@ -7,13 +7,8 @@ export default function Eboard() {
   const members = [
     {
       name: "Laith Taher",
-      role: "Co-Director",
+      role: "Director",
       src: "/images/Eboard/Laith.jpg",
-    },
-    {
-      name: "Caitlin Flynn",
-      role: "Co-Director",
-      src: "/images/Eboard/Caitlin.jpeg",
     },
     {
       name: "Maggie Collette",
