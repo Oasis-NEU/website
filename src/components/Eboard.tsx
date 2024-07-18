@@ -50,6 +50,11 @@ export default function Eboard() {
       role: "Internal Operations",
       src: "/images/Eboard/Rachel.jpg",
     },
+    {
+      name: "Tiffany Zheng",
+      role: "Brand Designer",
+      src: "/images/Eboard/Tiffany.png",
+    },
   ];
 
   return (
