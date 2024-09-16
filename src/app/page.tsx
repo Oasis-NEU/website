@@ -32,11 +32,11 @@ export default function Home() {
       />
       <div ref={ref}>
         <PageWrapper active="Home">
-          <div className="flex md:flex-row flex-col md:gap-8 mb-12">
+          {/* <div className="flex md:flex-row flex-col md:gap-8 mb-12">
             <EboardApps />
             <MentorAppsBanner />
-          </div>
-          {/* <TimeGatedRegister /> */}
+          </div> */}
+          <TimeGatedRegister />
           {/* <InfoSessionBanner /> */}
           {/* <div className="flex md:flex-row flex-col md:gap-8">
             <MentorAppsBanner />
