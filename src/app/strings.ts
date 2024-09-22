@@ -119,16 +119,16 @@ const strings = {
   HackSessionTimeline: {
     title: "Session by Session",
     days: [
-      { num: "0", date: "9/8", hook: "Ideation & Design" },
+      { num: "0", date: "9/8", hook: "Idea to Reality" },
       { num: "1", date: "9/15", hook: "Git & Web Basics" },
       { num: "2", date: "9/22", hook: "React Essentials" },
       { num: "3", date: "9/29", hook: "Databases" },
-      { num: "4", date: "10/6", hook: "Styling" },
-      { num: "5", date: "10/20", hook: "APIs" },
-      { num: "6", date: "10/27", hook: "Authentication" },
-      { num: "7", date: "11/3", hook: "Co-op Panel" },
-      { num: "8", date: "11/10", hook: "Deployment & Presenting" },
-      { num: "D", date: "11/17", hook: "Demo Day!" },
+      { num: "4", date: "10/6", hook: "Advanced Styling" },
+      { num: "5", date: "10/20", hook: "Authentication" },
+      { num: "6", date: "10/27", hook: "Cohort's Choice" },
+      { num: "7", date: "11/3", hook: "Co-Op Panel + Scope" },
+      { num: "8", date: "11/17", hook: "Deployment & Presenting" },
+      { num: "E", date: "11/24", hook: "Demo Day!" },
     ],
   },
   HistoryBlock: {
