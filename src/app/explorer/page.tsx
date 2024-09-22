@@ -96,7 +96,7 @@ export default function ExplorerJoin() {
       year: 2024,
       month: 9,
       day: 15,
-      hr24: 12+7,
+      hr24: 12,
       min60: 0,
       durationMins: 90,
       location: "Cargill Hall 097",

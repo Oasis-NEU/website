@@ -155,7 +155,7 @@ const strings = {
         a: "Sort of. We don't require you come to the Info Session, but we would like to warn that it's highly unlikely you'll be able to reserve a spot if you're not because students apply as a group and we facilitate finding a group during both the Info Session and Hack Session 1.",
       },
       {
-        q: "What technologies and languages will I alearn with Oasis?",
+        q: "What technologies and languages will I learn with Oasis?",
         a: "At a minimum, you'll learn how to use React, Git, and Supabase. In addition, you'll learn the theory behind these technologies and some project management skills, as well as anything else relevant to your group's specific project. More generally, you'll learn to research complex problems and seek out your own solutions for future projects of your own.",
       },
       {
