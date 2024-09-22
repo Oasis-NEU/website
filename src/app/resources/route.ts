@@ -4,6 +4,6 @@ export const runtime = "edge";
 
 export async function GET() {
   redirect(
-    "https://oasisneu.notion.site/Resources-4e33d41a70ff420ba46f4e55ccb6e719?pvs=4"
+    "https://oasisneu.notion.site/Oasis-Resources-Page-86e288dffdbd431faf13d9fa53e1ac4a"
   );
 }
