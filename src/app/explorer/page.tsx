@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import { faDatabase, faMobilePhone, faProjectDiagram, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faMobilePhone, faProjectDiagram, faQuestion, faServer } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
 import { useRef } from "react";
@@ -75,87 +75,87 @@ function downloadICS(
 export default function ExplorerJoin() {
   const events = [
     {
-      title: "HS0 / EX 0",
+      title: "HS0 / EX 0: Idea to Reality",
       description:
         "Learn the basics of teaming, ideation, project management, and UI/UX design so you're prepared with the skills you need to plan your project.",
       icon: faProjectDiagram,
       year: 2024,
-      month: 1,
-      day: 21,
+      month: 9,
+      day: 8,
       hr24: 12,
       min60: 0,
       durationMins: 120,
-      location: "Behrakis 010",
-      redacted: false,
+      location: "Cargill Hall 097",
+      redacted: true,
     },
     {
-      title: "HS1/EX1: Git Started",
+      title: "HS1 / EX1: Git & Web Basics",
       description:
         "Learn the foundational basics of Git, HTML, and CSS so you can build websites collaboratively with a team, either as part of the Project Series or on your own with the help of our Resources.",
       icon: faGithub,
       year: 2024,
-      month: 1,
-      day: 28,
-      hr24: 12+7,
-      min60: 0,
-      durationMins: 90,
-      location: "WVH 110",
-      redacted: false,
-    },
-    {
-      title: "EX2: React Essentials",
-      description:
-        "Expand on the basics of Git and learn essential React skills such as components and state.",
-      icon: faReact,
-      year: 2024,
-      month: 2,
-      day: 8,
-      hr24: 12+7,
-      min60: 0,
-      durationMins: 90,
-      location: "WVH 110",
-      redacted: false,
-    },
-    {
-      title: "EX3: APIs & Databases",
-      description:
-        "Learn to connect your web app with an API and then design a relational database in Supabase and connect it to your app.",
-      icon: faDatabase,
-      year: 2024,
-      month: 2,
+      month: 9,
       day: 15,
-      hr24: 12+7,
-      min60: 0,
-      durationMins: 90,
-      location: "Richards 254",
-      redacted: false,
-    },
-    {
-      title: "EX4: iOS Apps",
-      description:
-        "Learn the basics of app development for iOS using Xcode. It's required to have a Mac with Xcode downloaded for this session.",
-      icon: faMobilePhone,
-      year: 2024,
-      month: 3,
-      day: 21,
-      hr24: 12+7,
-      min60: 5,
-      durationMins: 90,
-      location: "WVH 110",
-      redacted: false,
-    },
-    {
-      title: "EX5: Deployment",
-      description:
-        "Learn to deploy your web app to the public using Netlify. Then we will have open Q&A to help you troubleshoot your web apps.",
-      icon: faServer,
-      year: 2024,
-      month: 3,
-      day: 31,
       hr24: 12,
       min60: 0,
-      durationMins: 30,
-      location: "WVH 108",
+      durationMins: 90,
+      location: "Cargill Hall 097",
+      redacted: true,
+    },
+    {
+      title: "EX2: TBD",
+      description:
+        "TBD",
+      icon: faQuestion,
+      year: 2024,
+      month: 12,
+      day: 31,
+      hr24: 23,
+      min60: 59,
+      durationMins: 0,
+      location: "?",
+      redacted: false,
+    },
+    {
+      title: "EX3: TBD",
+      description:
+        "TBD",
+      icon: faQuestion,
+      year: 2024,
+      month: 12,
+      day: 31,
+      hr24: 23,
+      min60: 59,
+      durationMins: 0,
+      location: "?",
+      redacted: false,
+    },
+    {
+      title: "EX4: TBD",
+      description:
+        "TBD",
+      icon: faQuestion,
+      year: 2024,
+      month: 12,
+      day: 31,
+      hr24: 23,
+      min60: 59,
+      durationMins: 0,
+      location: "?",
+      redacted: false,
+    },
+    {
+      title: "EX5: TBD",
+      description:
+        "TBD",
+      icon: faQuestion,
+      year: 2024,
+      month: 12,
+      day: 31,
+      hr24: 23,
+      min60: 59,
+      durationMins: 0,
+      location: "?",
       redacted: false,
     },
   ];
@@ -241,10 +241,8 @@ export default function ExplorerJoin() {
                     />
                   </div>
                   <div className="flex flex-col z-10 w-full flex-1 md:pl-4">
-                    <h3 className="text-ex-dark">{title}</h3>
-                    {!redacted && (
-                      <p className="text-ex-blue-dark">{description}</p>
-                    )}
+                    {!redacted ? <h3 className="text-ex-dark">{title}</h3> : <s><h3 className="text-ex-dark">{title}</h3></s>}
+                    {!redacted ? <p className="text-ex-blue-dark">{description}</p> : <s><p className="text-ex-blue-dark">{description}</p></s>}
                     <button
                       onClick={() =>
                         downloadICS(
@@ -282,6 +280,8 @@ export default function ExplorerJoin() {
               )
             )}
           </div>
+
+          {/**
           <h1 className="text-ex-blue-dark mb-4">
             Built with{" "}
             <span className="relative group hover:drop-shadow-xl">
@@ -318,6 +318,7 @@ export default function ExplorerJoin() {
               </div>
             ))}
           </div>
+          */}
         </PageWrapper>
       </div>
     </>
