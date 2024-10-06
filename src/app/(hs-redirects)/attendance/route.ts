@@ -4,7 +4,7 @@ export const runtime = "edge";
 
 export async function GET() {
   {
-    /* Currently on HS3*/
+    /* Currently on HS4*/
   }
-  redirect("https://forms.gle/2Pqv5QuxFWd3cK2y7");
+  redirect("https://forms.gle/bH1na2MfNAnWcbGw9");
 }
