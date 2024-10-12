@@ -127,8 +127,8 @@ const strings = {
       { num: "5", date: "10/20", hook: "Backend Buildout" },
       { num: "6", date: "10/27", hook: "Auth" },
       { num: "7", date: "11/3", hook: "Co-Op Panel + Scope" },
-      { num: "8", date: "11/10", hook: "Deployment & Presenting" },
-      { num: "E", date: "11/17", hook: "Demo Day!" },
+      { num: "8", date: "11/17", hook: "Deployment & Presenting" },
+      { num: "E", date: "11/24", hook: "Demo Day!" },
     ],
   },
   HistoryBlock: {
