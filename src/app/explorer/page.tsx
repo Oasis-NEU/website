@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import { faDatabase, faMobilePhone, faProjectDiagram, faQuestion, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faBrain, faLightbulb, faProjectDiagram, faQuestion, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
 import { useRef } from "react";
@@ -78,7 +78,7 @@ export default function ExplorerJoin() {
       title: "HS0 / EX 0: Idea to Reality",
       description:
         "Learn the basics of teaming, ideation, project management, and UI/UX design so you're prepared with the skills you need to plan your project.",
-      icon: faProjectDiagram,
+      icon: faBrain,
       year: 2024,
       month: 9,
       day: 8,
@@ -103,17 +103,17 @@ export default function ExplorerJoin() {
       redacted: true,
     },
     {
-      title: "EX2: TBD",
+      title: "EX2: Oasis x NER Express.js Workshop",
       description:
-        "TBD",
-      icon: faQuestion,
+        "Learn about the functionality of APIs and HTTP in your programs and practice using Express.js as your first web framework to better organize and code your project.",
+      icon: faCircleNodes,
       year: 2024,
-      month: 12,
-      day: 31,
-      hr24: 23,
-      min60: 59,
-      durationMins: 0,
-      location: "?",
+      month: 10,
+      day: 15,
+      hr24: 19,
+      min60: 0,
+      durationMins: 60,
+      location: "Churchhill 103",
       redacted: false,
     },
     {
