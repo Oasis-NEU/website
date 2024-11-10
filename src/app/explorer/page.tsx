@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import { faBrain, faLightbulb, faProjectDiagram, faQuestion, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
+import { faBrain, faLightbulb, faProjectDiagram, faQuestion, faCircleNodes, faPaperPlane, faDice } from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
 import { useRef } from "react";
@@ -114,16 +114,16 @@ export default function ExplorerJoin() {
       min60: 0,
       durationMins: 60,
       location: "Churchhill 103",
-      redacted: false,
+      redacted: true,
     },
     {
-      title: "EX3: TBD",
+      title: "EX3: Oasis x rev Vercel Deployment Workshop",
       description:
-        "TBD",
-      icon: faQuestion,
+        "Learn how to deploy your project on Vercel so that it can be viewed outside of your local machine.",
+      icon: faPaperPlane,
       year: 2024,
-      month: 12,
-      day: 31,
+      month: 11,
+      day: 12,
       hr24: 23,
       min60: 59,
       durationMins: 0,
@@ -131,17 +131,17 @@ export default function ExplorerJoin() {
       redacted: false,
     },
     {
-      title: "EX4: TBD",
+      title: "EX4: Oasis x Sandbox Mixer",
       description:
-        "TBD",
-      icon: faQuestion,
+        "Learn Computer Science related trivia with Sandbox!",
+      icon: faDice,
       year: 2024,
-      month: 12,
-      day: 31,
-      hr24: 23,
-      min60: 59,
-      durationMins: 0,
-      location: "?",
+      month: 11,
+      day: 19,
+      hr24: 20,
+      min60: 30,
+      durationMins: 60,
+      location: "West Village G 104",
       redacted: false,
     },
     {
