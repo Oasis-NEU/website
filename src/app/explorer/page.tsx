@@ -117,21 +117,7 @@ export default function ExplorerJoin() {
       redacted: true,
     },
     {
-      title: "EX3: Oasis x rev Vercel Deployment Workshop",
-      description:
-        "Learn how to deploy your project on Vercel so that it can be viewed outside of your local machine.",
-      icon: faPaperPlane,
-      year: 2024,
-      month: 11,
-      day: 12,
-      hr24: 23,
-      min60: 59,
-      durationMins: 0,
-      location: "?",
-      redacted: false,
-    },
-    {
-      title: "EX4: Oasis x Sandbox Mixer",
+      title: "EX3: Oasis x Sandbox Mixer",
       description:
         "Learn Computer Science related trivia with Sandbox!",
       icon: faDice,
@@ -142,6 +128,20 @@ export default function ExplorerJoin() {
       min60: 30,
       durationMins: 60,
       location: "West Village G 104",
+      redacted: false,
+    },
+    {
+      title: "EX4: TBD",
+      description:
+        "TBD",
+      icon: faQuestion,
+      year: 2024,
+      month: 12,
+      day: 31,
+      hr24: 23,
+      min60: 59,
+      durationMins: 0,
+      location: "?",
       redacted: false,
     },
     {
