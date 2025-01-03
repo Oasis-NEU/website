@@ -21,11 +21,6 @@ export default function Eboard() {
       src: "/images/Eboard/Ciaran.jpg",
     },
     {
-      name: "Eric Kim",
-      role: "Explorer Series Director",
-      src: "/images/Eboard/Eric.jpeg",
-    },
-    {
       name: "Quella Wang",
       role: "Resources Director",
       src: "/images/Eboard/Quella.jpg",
