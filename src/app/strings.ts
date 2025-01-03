@@ -119,16 +119,16 @@ const strings = {
   HackSessionTimeline: {
     title: "Session by Session",
     days: [
-      { num: "0", date: "9/8", hook: "Idea to Reality" },
-      { num: "1", date: "9/15", hook: "Git & Web Basics" },
-      { num: "2", date: "9/22", hook: "React Essentials" },
-      { num: "3", date: "9/29", hook: "Code and Create" },
-      { num: "4", date: "10/6", hook: "Databases" },
-      { num: "5", date: "10/20", hook: "Backend Buildout" },
-      { num: "6", date: "10/27", hook: "Auth" },
-      { num: "7", date: "11/3", hook: "Co-Op Panel + Scope" },
-      { num: "8", date: "11/17", hook: "Deployment & Presenting" },
-      { num: "E", date: "11/24", hook: "Demo Day!" },
+      { num: "0", date: "1/12", hook: "Git an Idea" },
+      { num: "1", date: "1/19", hook: "Web Basics" },
+      { num: "2", date: "1/26", hook: "React Essentials" },
+      { num: "3", date: "2/2", hook: "Databases" },
+      { num: "4", date: "2/9", hook: "Full Working Session" },
+      { num: "5", date: "2/16", hook: "Co-op Panel" },
+      { num: "6", date: "2/23", hook: "Cohort's Choice" },
+      { num: "7", date: "3/9", hook: "Authentication" },
+      { num: "8", date: "3/16", hook: "Deployment and Presenting" },
+      { num: "E", date: "3/23", hook: "Demo Day!" },
     ],
   },
   HistoryBlock: {
@@ -152,7 +152,7 @@ const strings = {
       },
       {
         q: "Do I have to be at the Info Session?",
-        a: "Sort of. We don't require you come to the Info Session, but we would like to warn that it's highly unlikely you'll be able to reserve a spot if you're not because students apply as a group and we facilitate finding a group during both the Info Session and Hack Session 1.",
+        a: "Sort of. We don't require you come to the Info Session, but we encourage it due to it allowing you to find other students who would like to build a similar project. We facilitate finding a potential group during both the Info Session and Hack Session 0.",
       },
       {
         q: "What technologies and languages will I learn with Oasis?",
@@ -199,6 +199,11 @@ const strings = {
       { name: "Project Series", link: "/join" },
       { name: "Explorer Series", link: "/explorer" },
       { name: "Mentor", link: "/mentor" },
+      {
+        name: "Projects",
+        link: "/projects",
+        target: "_blank",
+      },
       {
         name: "Resources",
         link: "/resources",
