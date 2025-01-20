@@ -3,7 +3,7 @@
 import BannerCard from "./BannerCard";
 import dynamic from "next/dynamic";
 
-const od = new Date("Sep 17 2024 17:00 EDT");
+const od = new Date("Jan 21 2025 12:00 EST");
 
 async function TimeGatedRegisterContents() {
   const openDate = od;
@@ -35,14 +35,14 @@ async function TimeGatedRegisterContents() {
           buttons={[
             {
               buttonTitle: "Register!",
-              href: "https://forms.gle/TYJoTM9ftp8rBhWR9",
+              href: "Https://forms.gle/p8KiBscMEct3a9tA7",
             },
           ]}
         >
           <p>
             Registration places you on the waiting list. We will send the
-            Commitment form to confirm your spot before end-of-day on Wednesday,
-            September 18th. Good luck!
+            Commitment form to confirm your spot end-of-day on Tuesday, January
+            21st. Good luck!
           </p>
         </BannerCard>
       )}
