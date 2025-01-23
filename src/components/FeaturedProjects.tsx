@@ -27,7 +27,7 @@ export default function FeaturedProjects() {
                 alt={"Image showcasing the project"}
                 width={width}
                 height={height}
-                className="aspect-square object-contain bg-oa-extra-light rounded-md group-hover:shadow-md"
+                className="aspect-square object-center bg-oa-extra-light rounded-md group-hover:shadow-md"
               />
               <div className="group-hover:bg-oa-light flex-1 rounded-md p-2">
                 <h3 className="text-xl">{title}</h3>
