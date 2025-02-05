@@ -6,7 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import { faBrain, faLightbulb, faProjectDiagram, faQuestion, faCircleNodes, faPaperPlane, faDice } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBrain,
+  faLightbulb,
+  faProjectDiagram,
+  faQuestion,
+  faCircleNodes,
+  faPaperPlane,
+  faDice,
+} from "@fortawesome/free-solid-svg-icons";
 import * as ics from "ics";
 import { faCalendarPlus } from "@fortawesome/free-regular-svg-icons";
 import { useRef } from "react";
@@ -30,7 +38,7 @@ function formatDate(
 
   return new Date(year, month - 1, day, hr24, min60, 0, 0)
     .toLocaleDateString("en-US", options)
-    .replace(":00", "")
+    .replace(":00", "");
 
   // return new Date(year + "/0" + month + "/0" + day + "T" + hr24 + ":" + min60);
 }
@@ -103,37 +111,34 @@ export default function ExplorerJoin() {
       redacted: true,
     },
     {
-      title: "EX2: Oasis x NER Express.js Workshop",
-      description:
-        "Learn about the functionality of APIs and HTTP in your programs and practice using Express.js as your first web framework to better organize and code your project.",
-      icon: faCircleNodes,
+      title: "EX2: TBD",
+      description: "TBD",
+      icon: faQuestion,
       year: 2024,
-      month: 10,
-      day: 15,
-      hr24: 19,
-      min60: 0,
-      durationMins: 60,
-      location: "Churchhill 103",
-      redacted: true,
+      month: 12,
+      day: 31,
+      hr24: 23,
+      min60: 59,
+      durationMins: 0,
+      location: "?",
+      redacted: false,
     },
     {
-      title: "EX3: Oasis x Sandbox Mixer",
-      description:
-        "Learn Computer Science related trivia with Sandbox!",
-      icon: faDice,
+      title: "EX3: TBD",
+      description: "TBD",
+      icon: faQuestion,
       year: 2024,
-      month: 11,
-      day: 19,
-      hr24: 20,
-      min60: 30,
-      durationMins: 60,
-      location: "West Village G 104",
+      month: 12,
+      day: 31,
+      hr24: 23,
+      min60: 59,
+      durationMins: 0,
+      location: "?",
       redacted: false,
     },
     {
       title: "EX4: TBD",
-      description:
-        "TBD",
+      description: "TBD",
       icon: faQuestion,
       year: 2024,
       month: 12,
@@ -146,8 +151,7 @@ export default function ExplorerJoin() {
     },
     {
       title: "EX5: TBD",
-      description:
-        "TBD",
+      description: "TBD",
       icon: faQuestion,
       year: 2024,
       month: 12,
@@ -241,8 +245,20 @@ export default function ExplorerJoin() {
                     />
                   </div>
                   <div className="flex flex-col z-10 w-full flex-1 md:pl-4">
-                    {!redacted ? <h3 className="text-ex-dark">{title}</h3> : <s><h3 className="text-ex-dark">{title}</h3></s>}
-                    {!redacted ? <p className="text-ex-blue-dark">{description}</p> : <s><p className="text-ex-blue-dark">{description}</p></s>}
+                    {!redacted ? (
+                      <h3 className="text-ex-dark">{title}</h3>
+                    ) : (
+                      <s>
+                        <h3 className="text-ex-dark">{title}</h3>
+                      </s>
+                    )}
+                    {!redacted ? (
+                      <p className="text-ex-blue-dark">{description}</p>
+                    ) : (
+                      <s>
+                        <p className="text-ex-blue-dark">{description}</p>
+                      </s>
+                    )}
                     <button
                       onClick={() =>
                         downloadICS(
