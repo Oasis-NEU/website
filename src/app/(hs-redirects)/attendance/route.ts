@@ -4,6 +4,6 @@ export const runtime = "edge";
 
 export async function GET() {
   redirect(
-    "https://forms.gle/6WUnXc7p64EEF4rY7"
+    "https://forms.gle/y2fNukNM9PnzQ4zWA"
   );
 }
