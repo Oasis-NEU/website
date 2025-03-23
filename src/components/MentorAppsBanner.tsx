@@ -9,7 +9,7 @@ export default function MentorAppsBanner({
   const buttons = [
     {
       buttonTitle: "Click Here to Apply!",
-      href: "https://forms.gle/AiETqXr8u9zUpuET9",
+      href: "https://forms.gle/fEsPFKKYs1nxa7sK9",
     },
     {
       buttonTitle: "Learn more",
@@ -18,8 +18,8 @@ export default function MentorAppsBanner({
   ];
   return (
     <TimeGate
-      openDate={new Date("January 6 2025 00:00")}
-      closeDate={new Date("January 11 2025 23:59")}
+      openDate={new Date("March 23 2025 00:00")}
+      closeDate={new Date("April 19 2025 11:59")}
       // waiting={
       //   <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
       //     {" "}
@@ -28,15 +28,15 @@ export default function MentorAppsBanner({
       // }
     >
       <BannerCard
-        title={"Mentor Applications are OPEN!"}
+        title={"Mentor applications are open!"}
         buttons={hideLearnMore ? buttons.slice(0, 1) : buttons.slice(0, 2)}
       >
         <>
           <p>
-            Have prior web development experience? Mentor Applications are open
-            for Spring 2025. Apply now! Applications close at{" "}
+            Have prior web development experience? Apply now! The first round of
+            applications close at{" "}
             <b className="text-oa-blue italic">
-              midnight, Saturday, January 11th
+              midnight, Saturday, April 19th
             </b>
             .
           </p>
