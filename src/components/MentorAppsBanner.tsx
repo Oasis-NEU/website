@@ -19,13 +19,13 @@ export default function MentorAppsBanner({
   return (
     <TimeGate
       openDate={new Date("March 23 2025 00:00")}
-      closeDate={new Date("April 19 2025 11:59")}
-      // waiting={
-      //   <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
-      //     {" "}
-      //     Stay tuned ...
-      //   </BannerCard>
-      // }
+      closeDate={new Date("April 19 2025 23:59")}
+    // waiting={
+    //   <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
+    //     {" "}
+    //     Stay tuned ...
+    //   </BannerCard>
+    // }
     >
       <BannerCard
         title={"Mentor applications are open!"}
