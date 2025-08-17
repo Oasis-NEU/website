@@ -18,14 +18,14 @@ export default function MentorAppsBanner({
   ];
   return (
     <TimeGate
-      openDate={new Date("March 23 2025 00:00")}
-      closeDate={new Date("April 19 2025 23:59")}
-    // waiting={
-    //   <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
-    //     {" "}
-    //     Stay tuned ...
-    //   </BannerCard>
-    // }
+      openDate={new Date("August 15 2025 00:00")}
+      closeDate={new Date("August 29 2025 23:59")}
+      // waiting={
+      //   <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
+      //     {" "}
+      //     Stay tuned ...
+      //   </BannerCard>
+      // }
     >
       <BannerCard
         title={"Mentor applications are open!"}
@@ -33,10 +33,10 @@ export default function MentorAppsBanner({
       >
         <>
           <p>
-            Have prior web development experience? Apply now! The first round of
-            applications close at{" "}
+            Have prior web development experience? Apply now! Applications due
+            by{" "}
             <b className="text-oa-blue italic">
-              midnight, Saturday, April 19th
+              midnight on Friday, August 29th
             </b>
             .
           </p>
