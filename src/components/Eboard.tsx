@@ -6,49 +6,59 @@ import Image from "next/image";
 export default function Eboard() {
   const members = [
     {
-      name: "Laith Taher",
-      role: "Director",
-      src: "/images/Eboard/Laith.jpg",
-    },
-    {
-      name: "Maggie Collette",
-      role: "Mentor Lead",
-      src: "/images/Eboard/maggie.jpeg",
-    },
-    {
       name: "Ciaran Flanagan",
-      role: "Project Series Director",
-      src: "/images/Eboard/Ciaran.jpg",
-    },
-    {
-      name: "Quella Wang",
-      role: "Resources Director",
-      src: "/images/Eboard/Quella.jpg",
-    },
-    {
-      name: "Cee Latkar",
-      role: "Marketing Co-Director",
-      src: "/images/Eboard/cee.jpeg",
-    },
-    {
-      name: "Harini Avula",
-      role: "Marketing Co-Director",
-      src: "/images/Eboard/harini.jpeg",
-    },
-    {
-      name: "Abby Elbaum",
-      role: "External Operations",
-      src: "/images/Eboard/Abby.jpg",
+      role: "Co-Director",
+      src: "/images/Eboard/Ciaran.1.jpeg",
     },
     {
       name: "Rachel Chertok",
-      role: "Internal Operations",
-      src: "/images/Eboard/Rachel.jpg",
+      role: "Co-Director",
+      src: "/images/Eboard/Rachel.1.jpeg",
     },
     {
-      name: "Tiffany Zheng",
+      name: "Laith Taher",
+      role: "Mentor Lead",
+      src: "/images/Eboard/Laith.1.png",
+    },
+    {
+      name: "Aryan Gupta",
+      role: "Project Series Co-Director",
+      src: "/images/Eboard/Aryan.jpg",
+    },
+    {
+      name: "Paarth Trehan",
+      role: "Project Series Co-Director",
+      src: "/images/Eboard/Paarth.jpeg",
+    },
+    {
+      name: "Audrey Ng",
+      role: "Resources Director",
+      src: "/images/Eboard/Audrey.jpg",
+    },
+    {
+      name: "Ripandeep Kaur",
+      role: "Marketing Co-Director",
+      src: "/images/Eboard/Ripan.png",
+    },
+    {
+      name: "Jolin Yang",
+      role: "Marketing Co-Director",
+      src: "/images/Eboard/Jolin.jpg",
+    },
+    {
+      name: "Abby Elbaum",
+      role: "Operations Director",
+      src: "/images/Eboard/Abby.jpg",
+    },
+    {
+      name: "Shlok Nanani",
+      role: "Outreach Director",
+      src: "/images/Eboard/Shlok.jpg",
+    },
+    {
+      name: "Jahnavi Bulusu",
       role: "Brand Designer",
-      src: "/images/Eboard/Tiffany.png",
+      src: "/images/Eboard/Jahnavi.jpg",
     },
   ];
 
