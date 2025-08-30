@@ -72,7 +72,7 @@ const strings = {
         num: "4",
         tag: "Hack Sessions begin",
         time: "3rd Sunday of the Semester",
-        desc: "Once the enrollment process is complete weekly Sunday Hack Sessions begin. Unfortunately, attendance at Hack Sessions is restricted to accepted students only. For students still looking to get involved, we host Explorer Events which are open to all.",
+        desc: "Once the enrollment process is complete weekly Sunday Hack Sessions begin. Unfortunately, attendance at Hack Sessions is restricted to accepted students only. For students still looking to get involved, we host collaboration events which are open to all.",
       },
     ],
   },
@@ -168,7 +168,7 @@ const strings = {
   Logo: {},
   MentorBlock: {
     title: "Mentor",
-    body: "Mentors are the life-blood of Oasis. Without them we cannot run the Project Series or our Explorer events. You'll guide two groups from brainstorming through delivery by teaching them how to research technologies relevant to their project, how to weigh options between features based on deadlines, and you'll help them debug as issues crop up. Mentors are the ones teach participants how to learn the skills they need to bring their projects to life!",
+    body: "Mentors are the life-blood of Oasis. Without them we cannot run the Project Series events. You'll guide two groups from brainstorming through delivery by teaching them how to research technologies relevant to their project, how to weigh options between features based on deadlines, and you'll help them debug as issues crop up. Mentors are the ones teach participants how to learn the skills they need to bring their projects to life!",
     points: [
       {
         title: "Why",
@@ -198,7 +198,7 @@ const strings = {
       { name: "Home", link: "/" },
       // { name: "About", link: "/about" },
       { name: "Project Series", link: "/join" },
-      { name: "Explorer Series", link: "/explorer" },
+      //{ name: "Explorer Series", link: "/explorer" },
       { name: "Mentor", link: "/mentor" },
       {
         name: "Projects",
