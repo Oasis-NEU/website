@@ -3,5 +3,7 @@ import { redirect } from "next/navigation";
 export const runtime = "edge";
 
 export async function GET() {
-  redirect("https://forms.gle/k4JmeJS3q3s6SAJH9");
+  redirect(
+    "https://docs.google.com/forms/d/e/1FAIpQLSdQCayl0Y2ylpuYRpyKCAfmWGRIbSV6qyrvVhAZGYYBDtP4DA/viewform",
+  );
 }
