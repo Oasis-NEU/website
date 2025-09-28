@@ -3,7 +3,7 @@
 import BannerCard from "./BannerCard";
 import dynamic from "next/dynamic";
 
-const od = new Date("Sep 21 2025 20:00 EDT");
+const od = new Date("Sep 21 2025 4:30 EDT");
 
 async function TimeGatedRegisterContents() {
   const openDate = od;
