@@ -7,12 +7,12 @@ export default function Eboard() {
   const members = [
     {
       name: "Ciaran Flanagan",
-      role: "Co-Director",
+      role: "Co-President",
       src: "/images/Eboard/Ciaran.1.jpeg",
     },
     {
       name: "Rachel Chertok",
-      role: "Co-Director",
+      role: "Co-President",
       src: "/images/Eboard/Rachel.1.jpeg",
     },
     {
