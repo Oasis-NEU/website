@@ -5,8 +5,8 @@ import TimeGate from "./TimeGate";
 export default function EboardApps() {
   return (
     <TimeGate
-      openDate={new Date("March 23 2025 00:00")}
-      closeDate={new Date("Apr 19 2025 23:59")}
+      openDate={new Date("Nov 15 2025 00:00")}
+      closeDate={new Date("Dec 15 2025 23:59")}
       waiting={
         <BannerCard title={"Eboard applications are opening soon"} buttons={[]}>
           {" "}
@@ -20,7 +20,7 @@ export default function EboardApps() {
             <p>
               Applications close at{" "}
               <b className="text-oa-blue italic">
-                midnight, Saturday, April 19th
+                midnight, Monday, December 15th
               </b>
               . Email{" "}
               <a
@@ -33,7 +33,7 @@ export default function EboardApps() {
             </p>
             <Link
               className="ring-2 ring-oa-extra-light rounded-lg shadow-md hover:ring-4 hover:shadow-lg transition-all duration-150 z-20 text-oa-extra-light bg-oa-green p-2 px-4 md:mx-auto mr-auto"
-              href="https://forms.gle/3RVdJvjnBbyhp69f8"
+              href="https://forms.gle/NofiVC2m1ftVzHNk7"
             >
               Click here to apply!
             </Link>

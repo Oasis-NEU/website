@@ -19,7 +19,6 @@ export default function Mentor() {
     <PageWrapper active={"Mentor"} title={"Oasis | Be a mentor!"}>
       <MentorAppsBanner hideLearnMore={true} />
       <MentorHeader />
-      {/* <MentorAppsBanner hideLearnMore={true} /> */}
       {/* <BannerCard title={""} buttons={[]}>
         Mentor applications are currently closed. Please feel free to reach out
         with questions by emailing{" "}
