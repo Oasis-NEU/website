@@ -9,7 +9,7 @@ export default function MentorAppsBanner({
   const buttons = [
     {
       buttonTitle: "Click Here to Apply!",
-      href: "https://forms.gle/fEsPFKKYs1nxa7sK9",
+      href: "https://forms.gle/tq6Bi2BqnmhXyyo99",
     },
     {
       buttonTitle: "Learn more",
