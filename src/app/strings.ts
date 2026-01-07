@@ -53,13 +53,13 @@ const strings = {
       {
         num: "1",
         tag: "Info Session",
-        time: "1st Sunday of the semester",
+        time: "1/13 in Cargill 097 from 8-9pm",
         desc: "Learn more about what Oasis is, our Hack Session timeline, new changes for this year, and meet our Eboard.",
       },
       {
         num: "2",
         tag: "Hack Sessions 0 & 1",
-        time: "Sundays following Info Session",
+        time: "Sundays following Info Session. Attend Info Session for date and time information!",
         desc: "Join us for Hack Sessions 0 and 1 where we'll introduce essential skills and give you opportunities to meet other prospective participants so you can form a group and decide on an idea.",
       },
       {
@@ -120,16 +120,16 @@ const strings = {
   HackSessionTimeline: {
     title: "Session by Session",
     days: [
-      { num: "0", date: "9/14", hook: "Git an Idea" },
-      { num: "1", date: "9/21", hook: "Web Basics" },
-      { num: "2", date: "9/28", hook: "React Essentials" },
-      { num: "3", date: "10/5", hook: "React Continued" },
-      { num: "4", date: "10/12", hook: "Databases" },
-      { num: "5", date: "10/19", hook: "API Development" },
-      { num: "6", date: "10/26", hook: "Co-op Panel" },
-      { num: "7", date: "11/2", hook: "Authentication" },
-      { num: "8", date: "11/9", hook: "Deployment and Presenting" },
-      { num: "E", date: "11/16", hook: "Demo Day!" },
+      { num: "0", date: "1/18", hook: "Git an Idea" },
+      { num: "1", date: "1/25", hook: "Web Basics" },
+      { num: "2", date: "2/1", hook: "React Essentials" },
+      { num: "3", date: "2/8", hook: "React Continued" },
+      { num: "4", date: "2/22", hook: "Databases" },
+      { num: "5", date: "3/8", hook: "API Development" },
+      { num: "6", date: "3/15", hook: "Co-op Panel" },
+      { num: "7", date: "3/22", hook: "Authentication" },
+      { num: "8", date: "3/29", hook: "Deployment and Presenting" },
+      { num: "E", date: "4/12", hook: "Demo Day!" },
     ],
   },
   HistoryBlock: {
@@ -153,7 +153,7 @@ const strings = {
       },
       {
         q: "Do I have to be at the Info Session?",
-        a: "Sort of. We don't require you come to the Info Session, but we encourage it due to it allowing you to find other students who would like to build a similar project. We facilitate finding a potential group during both the Info Session and Hack Session 0.",
+        a: "Yes! It is critical in allowing you to find other students who would like to build a similar project. We facilitate finding a potential group during both the Info Session and Hack Session 0. However, if you can't make it or didn't hear about it, please email us and we'll do our best to accommodate!",
       },
       {
         q: "What technologies and languages will I learn with Oasis?",
