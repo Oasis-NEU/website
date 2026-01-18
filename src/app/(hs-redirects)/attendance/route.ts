@@ -3,5 +3,5 @@ import { redirect } from "next/navigation";
 export const runtime = "edge";
 
 export async function GET() {
-  redirect("https://forms.gle/B8hxhmm6T3HF8JVT8");
+  redirect("https://forms.gle/dQ1tSFcFBqECAQ2i9");
 }
