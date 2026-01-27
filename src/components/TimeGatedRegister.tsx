@@ -49,7 +49,7 @@ export default function TimeGatedRegister() {
     return (
       <BannerCard title={"Registration is almost open!"} buttons={[]}>
         <p>
-          Registration opens on {openDateString}. You'll need to reload this
+          Registration opens on {openDateString}. You&apos;ll need to reload this
           page after it opens to see the registration link.
         </p>
       </BannerCard>
