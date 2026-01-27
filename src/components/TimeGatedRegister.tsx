@@ -3,7 +3,7 @@
 import BannerCard from "./BannerCard";
 import dynamic from "next/dynamic";
 
-const od = new Date("Sep 21 2025 4:30 EDT");
+const od = new Date("2026-01-27T18:00:00-05:00");
 
 async function TimeGatedRegisterContents() {
   const openDate = od;
@@ -15,15 +15,18 @@ async function TimeGatedRegisterContents() {
     minute: "2-digit",
   });
 
-  const currTime = await fetch("https://worldtimeapi.org/api/timezone/est")
+  const currTime = await fetch("/api/time")
     .then((response) => response.json())
-    .then((data) => {
-      return new Date(data.datetime);
-    });
+    .then((data) => new Date(data.datetime))
+    .catch(() => null);
 
   return (
     <>
-      {currTime === null || (openDate !== null && currTime < openDate) ? (
+      {currTime === null ? (
+        <BannerCard title={"Unable to load registration status"} buttons={[]}>
+          <p>Please refresh the page.</p>
+        </BannerCard>
+      ) : currTime < openDate ? (
         <BannerCard title={"Registration is almost open!"} buttons={[]}>
           <p>{`Registration opens on ${
             openDateString ?? "... "
@@ -35,14 +38,13 @@ async function TimeGatedRegisterContents() {
           buttons={[
             {
               buttonTitle: "Register!",
-              href: "https://docs.google.com/forms/d/e/1FAIpQLSdF52guyp-NL0sA0civ_-k9DRZsrjKRZSf67se2ursAAJaUpw/viewform?usp=header",
+              href: "https://forms.gle/UYUyiZMSuh42a7768",
             },
           ]}
         >
           <p>
-            Registration places you on the waiting list. We will send the
-            Commitment form to confirm your spot end-of-day on Tuesday,
-            September 23th. Good luck!
+            Registration places you on the waiting list. If you are accepted, you must fill out the commitment form by end-of-day on Thursday,
+            January 29th. Good luck!
           </p>
         </BannerCard>
       )}

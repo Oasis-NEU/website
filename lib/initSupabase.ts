@@ -1,3 +1,4 @@
+/*
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SB_LINK!;
@@ -9,3 +10,4 @@ const options = {
 };
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, options);
+*/
