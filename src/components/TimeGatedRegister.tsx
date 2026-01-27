@@ -1,69 +1,76 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import BannerCard from "./BannerCard";
-import dynamic from "next/dynamic";
 
-const od = new Date("2026-01-27T18:00:00-05:00");
+const openDate = new Date("2026-01-27T18:00:00-05:00");
+const openDateString = openDate.toLocaleDateString("en-US", {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+});
 
-async function TimeGatedRegisterContents() {
-  const openDate = od;
-  const openDateString = od.toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-  });
+type Status = "loading" | "waiting" | "open" | "error";
 
-  const currTime = await fetch("/api/time")
-    .then((response) => response.json())
-    .then((data) => new Date(data.datetime))
-    .catch(() => null);
+export default function TimeGatedRegister() {
+  const [status, setStatus] = useState<Status>("loading");
 
-  return (
-    <>
-      {currTime === null ? (
-        <BannerCard title={"Unable to load registration status"} buttons={[]}>
-          <p>Please refresh the page.</p>
-        </BannerCard>
-      ) : currTime < openDate ? (
-        <BannerCard title={"Registration is almost open!"} buttons={[]}>
-          <p>{`Registration opens on ${
-            openDateString ?? "... "
-          }. You'll need to reload this page after it opens to see the registration link.`}</p>
-        </BannerCard>
-      ) : (
-        <BannerCard
-          title={"Registration is open!"}
-          buttons={[
-            {
-              buttonTitle: "Register!",
-              href: "https://forms.gle/UYUyiZMSuh42a7768",
-            },
-          ]}
-        >
-          <p>
-            Registration places you on the waiting list. If you are accepted, you must fill out the commitment form by end-of-day on Thursday,
-            January 29th. Good luck!
-          </p>
-        </BannerCard>
-      )}
-    </>
-  );
-}
+  useEffect(() => {
+    fetch("/api/time")
+      .then((response) => response.json())
+      .then((data) => {
+        const currTime = new Date(data.datetime);
+        setStatus(currTime >= openDate ? "open" : "waiting");
+      })
+      .catch(() => setStatus("error"));
+  }, []);
 
-const TimeGatedRegister = dynamic(
-  () => Promise.resolve(TimeGatedRegisterContents),
-  {
-    ssr: false,
-    loading: () => (
+  if (status === "loading") {
+    return (
       <div className="animate-pulse">
         <p className="animate-bounce text-oa-dark">
-          Loading registration banner ...{" "}
+          Loading registration banner...
         </p>
       </div>
-    ),
+    );
   }
-);
 
-export default TimeGatedRegister;
+  if (status === "error") {
+    return (
+      <BannerCard title={"Unable to load registration status"} buttons={[]}>
+        <p>Please refresh the page.</p>
+      </BannerCard>
+    );
+  }
+
+  if (status === "waiting") {
+    return (
+      <BannerCard title={"Registration is almost open!"} buttons={[]}>
+        <p>
+          Registration opens on {openDateString}. You'll need to reload this
+          page after it opens to see the registration link.
+        </p>
+      </BannerCard>
+    );
+  }
+
+  return (
+    <BannerCard
+      title={"Registration is open!"}
+      buttons={[
+        {
+          buttonTitle: "Register!",
+          href: "https://docs.google.com/forms/d/e/1FAIpQLSdF52guyp-NL0sA0civ_-k9DRZsrjKRZSf67se2ursAAJaUpw/viewform?usp=header",
+        },
+      ]}
+    >
+      <p>
+        Registration places you on the waiting list. If you are accepted, you
+        must fill out the commitment form by end-of-day on Thursday, January
+        29th. Good luck!
+      </p>
+    </BannerCard>
+  );
+}

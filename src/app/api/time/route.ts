@@ -1,5 +1,7 @@
+import { NextResponse } from "next/server";
+
 export const runtime = "edge";
 
 export async function GET() {
-  return Response.json({ datetime: new Date().toISOString() });
+  return NextResponse.json({ datetime: new Date().toISOString() });
 }
