@@ -16,14 +16,9 @@ export default function Eboard() {
       src: "/images/Eboard/Rachel.1.jpeg",
     },
     {
-      name: "Laith Taher",
-      role: "Mentor Lead",
-      src: "/images/Eboard/Laith.1.png",
-    },
-    {
-      name: "Aryan Gupta",
+      name: "Malcolm Tavaria",
       role: "Project Series Co-Director",
-      src: "/images/Eboard/Aryan.jpg",
+      src: "/images/Eboard/Malcolm.jpeg",
     },
     {
       name: "Paarth Trehan",
@@ -31,9 +26,9 @@ export default function Eboard() {
       src: "/images/Eboard/Paarth.jpeg",
     },
     {
-      name: "Audrey Ng",
+      name: "Shiven Ajwaliya",
       role: "Resources Director",
-      src: "/images/Eboard/Audrey.jpg",
+      src: "/images/Eboard/shiven.png",
     },
     {
       name: "Ripandeep Kaur",
@@ -46,14 +41,9 @@ export default function Eboard() {
       src: "/images/Eboard/Jolin.jpg",
     },
     {
-      name: "Abby Elbaum",
+      name: "Ashley Zheng",
       role: "Operations Director",
-      src: "/images/Eboard/Abby.jpg",
-    },
-    {
-      name: "Shlok Nanani",
-      role: "Outreach Director",
-      src: "/images/Eboard/Shlok.jpg",
+      src: "/images/Eboard/AshleyZ.png",
     },
     {
       name: "Jahnavi Bulusu",
