@@ -6,14 +6,14 @@ import Image from "next/image";
 export default function Eboard() {
   const members = [
     {
-      name: "Ciaran Flanagan",
+      name: "Jolin Yang",
       role: "Co-President",
-      src: "/images/Eboard/Ciaran.1.jpeg",
+      src: "/images/Eboard/Jolin.jpg",
     },
     {
-      name: "Rachel Chertok",
+      name: "Aryan Gupta",
       role: "Co-President",
-      src: "/images/Eboard/Rachel.1.jpeg",
+      src: "/images/Eboard/Aryan.jpg",
     },
     {
       name: "Malcolm Tavaria",
@@ -27,8 +27,13 @@ export default function Eboard() {
     },
     {
       name: "Shiven Ajwaliya",
-      role: "Resources Director",
+      role: "Mentor Director & Accelerator Series Co-Director",
       src: "/images/Eboard/shiven.png",
+    },
+    {
+      name: "Audrey Ng",
+      role: "Accelerator Series Co-Director",
+      src: "/images/Eboard/Audrey.jpg",
     },
     {
       name: "Ripandeep Kaur",
@@ -36,9 +41,9 @@ export default function Eboard() {
       src: "/images/Eboard/Ripan.png",
     },
     {
-      name: "Jolin Yang",
+      name: "Bella He",
       role: "Marketing Co-Director",
-      src: "/images/Eboard/Jolin.jpg",
+      src: "/images/Eboard/bella.JPG",
     },
     {
       name: "Ashley Zheng",
