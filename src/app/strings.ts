@@ -48,7 +48,7 @@ const strings = {
     title: "Enrollment Timeline",
     body: "Each semester we welcome a new cohort of students. We are limited in how many students we can accept due to a limited number of available mentors. This process is subject to change each semester, but this is the typical series of events.",
     headline:
-      "Acceptance is is first-come-first-serve; it is not based on your technical experience or background.",
+      "Acceptance is first-come-first-serve; it is not based on your technical experience or background.",
     steps: [
       {
         num: "1",
@@ -120,16 +120,16 @@ const strings = {
   HackSessionTimeline: {
     title: "Session by Session",
     days: [
-      { num: "0", date: "1/18", hook: "Git an Idea" },
-      { num: "1", date: "1/25", hook: "Web Basics" },
-      { num: "2", date: "2/1", hook: "React Essentials" },
-      { num: "3", date: "2/8", hook: "React Continued" },
-      { num: "4", date: "2/22", hook: "Databases" },
-      { num: "5", date: "3/8", hook: "API Development" },
-      { num: "6", date: "3/15", hook: "Co-op Panel" },
-      { num: "7", date: "3/22", hook: "Authentication" },
-      { num: "8", date: "3/29", hook: "Deployment and Presenting" },
-      { num: "E", date: "4/12", hook: "Demo Day!" },
+      { num: "0", date: "9/13", hook: "Git an Idea" },
+      { num: "1", date: "9/20", hook: "React Essentials" },
+      { num: "2", date: "9/27", hook: "React Continued" },
+      { num: "3", date: "10/4", hook: "Databases" },
+      { num: "4", date: "10/11", hook: "AI Implementation" },
+      { num: "5", date: "10/18", hook: "API Development" },
+      { num: "6", date: "10/25", hook: "Co-op Panel" },
+      { num: "7", date: "TBD", hook: "Authentication" },
+      { num: "8", date: "TBD", hook: "Deployment and Presenting" },
+      { num: "E", date: "TBD", hook: "Demo Day!" },
     ],
   },
   HistoryBlock: {
