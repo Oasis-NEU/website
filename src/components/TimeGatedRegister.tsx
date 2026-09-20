@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import BannerCard from "./BannerCard";
 
-const openDate = new Date("2026-01-27T18:00:00-05:00");
+const openDate = new Date("2026-09-22T12:00:00-04:00");
 const openDateString = openDate.toLocaleDateString("en-US", {
   weekday: "long",
   month: "long",
@@ -62,14 +62,14 @@ export default function TimeGatedRegister() {
       buttons={[
         {
           buttonTitle: "Register!",
-          href: "https://docs.google.com/forms/d/e/1FAIpQLSdF52guyp-NL0sA0civ_-k9DRZsrjKRZSf67se2ursAAJaUpw/viewform?usp=header",
+          href: "https://forms.gle/g8w5UdoE7yQXBuSh7",
         },
       ]}
     >
       <p>
         Registration places you on the waiting list. If you are accepted, you
-        must fill out the commitment form by end-of-day on Thursday, January
-        29th. Good luck!
+        must fill out the commitment form by end-of-day on Thursday, September
+        24th. Good luck!
       </p>
     </BannerCard>
   );
